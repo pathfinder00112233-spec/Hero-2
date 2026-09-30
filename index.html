@@ -2573,8 +2573,8 @@ main.fluid-section-band .world-divider.world-visible::after {
 <div class="chip-track" id="stickyChipTrack">
 <button class="nav-chip is-active" data-target="treatments" type="button">Treatments &amp; Cost</button>
 <button class="nav-chip" data-target="casesSection" type="button">Veneer Cases</button>
+<button class="nav-chip" data-target="facilitySection" type="button">Our Facility</button>
 <button class="nav-chip" data-target="reviewsSection" type="button">4.8 Star · Verified Google Reviews</button>
-<button class="nav-chip" data-target="visitSection" type="button">Our Facility</button>
 </div>
 </nav>
 <!-- ==========================================================
@@ -2968,7 +2968,7 @@ main.fluid-section-band .world-divider.world-visible::after {
 <div class="custom-rail-slider-thumb" id="baSliderThumb"></div>
 </div>
 <!-- 7. BALANCED 2x2 ARCHITECTURAL BENTO SHOWCASE (ZERO VOID) -->
-<div class="editorial-heading-group reveal-scroll">
+<div class="editorial-heading-group reveal-scroll" id="facilitySection">
 <div>
 <span class="editorial-subhead">Our Facility</span>
 <h3 class="section-display-title serif-title">Modern Surgical Facility</h3>
@@ -3247,7 +3247,7 @@ main.fluid-section-band .world-divider.world-visible::after {
          B. BULLETPROOF 1-TAP 4-CHIP JUMP NAVIGATION & SCROLL-SPY
       =========================================================== */
       const navChips = document.querySelectorAll(".nav-chip");
-      const observedSectionIds = ["treatments", "casesSection", "reviewsSection", "visitSection"];
+      const observedSectionIds = ["treatments", "casesSection", "facilitySection", "reviewsSection"];
       const observedSections = observedSectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
       let isNavClicking = false;
@@ -3292,9 +3292,9 @@ main.fluid-section-band .world-divider.world-visible::after {
         const windowHeight = window.innerHeight;
         const docHeight = document.documentElement.scrollHeight;
 
-        // Snaps directly to Location when reaching the bottom portion
+        // Snaps to Reviews at the bottom after the Facility section.
         if (windowHeight + scrollY >= docHeight - 140) {
-          setActiveChip("visitSection");
+          setActiveChip("reviewsSection");
           return;
         }
 
@@ -3840,7 +3840,7 @@ main.fluid-section-band .world-divider.world-visible::after {
           const eased = 1 - Math.pow(1 - progress, 3);
 
           const years = Math.round(eased * 10);
-          const patients = Math.round(eased * 3000);
+          const patients = Math.round(eased * 6000);
           const rating = eased * 5;
 
           elExperience.textContent = years + "+ Years";
@@ -3851,7 +3851,7 @@ main.fluid-section-band .world-divider.world-visible::after {
             requestAnimationFrame(frame);
           } else {
             elExperience.textContent = "10+ Years";
-            elPatients.textContent = "3000+";
+            elPatients.textContent = "6000+";
             elRating.textContent = "5.0 Star";
           }
         }
