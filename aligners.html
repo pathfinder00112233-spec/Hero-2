@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a3834" name="theme-color"/>
+<title>Clear Aligners vs Metal Braces 3D Explorer | Perfect SMILE</title>
+<meta content="Interactive 3D clear aligner explorer with floating anatomical tray, transparent orthodontic pricing tiers, and specialist digital teeth alignment by Dr. Prvish Rathee (BDS, MIDA – PGIMS) at Perfect SMILE." name="description"/>
+<link href="https://mintclinicrohtak.com/aligners.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="Clear Aligners 3D Explorer | Perfect SMILE" property="og:title"/>
+<meta content="Explore interactive 3D teeth straightening and transparent orthodontic pricing." property="og:description"/>
+<meta content="https://mintclinicrohtak.com/aligners.html" property="og:url"/>
+<meta content="https://mintclinicrohtak.com/hero-desktop.webp" property="og:image"/>
+<!-- Structured Data -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Clear Aligner Orthodontics","procedureType":"NonSurgicalProcedure","bodyLocation":"Teeth","howPerformed":"Custom sequential transparent medical polymer trays worn 20-22 hours daily to align dental arches comfortably and predictably.","performer":{"@context":"https://schema.org","@type":"Dentist","@id":"https://mintclinicrohtak.com/#clinic","name":"Perfect SMILE","url":"https://mintclinicrohtak.com/","image":"https://mintclinicrohtak.com/hero-desktop.webp","telephone":["+919253993999","+919034467399"],"priceRange":"₹₹₹","medicalSpecialty":"Dentistry","address":{"@type":"PostalAddress","streetAddress":"Indira Market, Opposite Radhe Radhe Park, Near Oxygen Hospital, Babra Mohalla","addressLocality":"Rohtak","addressRegion":"Haryana","postalCode":"124001","addressCountry":"IN"},"founder":{"@type":"Person","name":"Dr. Prvish Rathee","jobTitle":"Lead Surgeon","hasCredential":"BDS, MIDA – PGIMS"},"hasMap":"https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac","sameAs":["https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac"],"areaServed":[{"@type":"Place","name":"Babra Mohalla"},{"@type":"Place","name":"Indira Market"},{"@type":"Place","name":"Model Town"},{"@type":"Place","name":"D-Park"},{"@type":"Place","name":"Delhi Road"},{"@type":"Place","name":"PGIMS Complex"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"14:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"16:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"10:00","closes":"12:00","description":"Strictly By Appointment"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","bestRating":"5","reviewCount":76,"ratingCount":76},"employee":[{"@type":"Person","name":"Dr. Prvish Rathee","jobTitle":"Lead Surgeon","hasCredential":"BDS, MIDA – PGIMS"},{"@type":"Person","name":"Dr. Nidhi Sharma","jobTitle":"Associate Surgeon","hasCredential":"BDS, MIDA – PGIMS"}]}}</script>
+<!-- Three.js & Touch Orbit Controls -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-canvas: #faf8f4;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f4ede2;
+
+      --text-main: #14211e;
+      --text-muted: #53645e;
+
+      --teal-primary: #0a3834;
+      --teal-hover: #062623;
+      --teal-soft: #f0f7f5;
+      --teal-border: #b8ded7;
+
+      --emerald-accent: #047857;
+      --emerald-soft: #ecfdf5;
+
+      --gold-primary: #b5893b;
+      --gold-accent: #8e651e;
+      --gold-soft: #fcf8f0;
+      --gold-border: #ebd9b5;
+
+      --border-color: #ebe4d8;
+      --shadow-sm: 0 1px 3px rgba(10, 56, 52, 0.04);
+      --shadow-card: 0 4px 18px -2px rgba(10, 56, 52, 0.06);
+      --shadow-desk: 0 18px 45px -8px rgba(10, 56, 52, 0.16);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      background-color: var(--bg-canvas);
+    }
+
+    body {
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 96px;
+    }
+
+    @media (min-width: 900px) and (orientation: landscape) {
+      body { padding-bottom: 0; }
+    }
+
+    .fluid-section-band {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 clamp(16px, 3.5vw, 44px);
+    }
+
+    .serif-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.01em;
+    }
+
+    /* 1. SEAMLESS HEADER */
+    .site-nav-header {
+      width: 100%;
+      padding-top: clamp(14px, 2.5vw, 22px);
+      padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: transparent;
+      border: none !important;
+    }
+
+    .header-brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .gold-tooth-icon {
+      width: clamp(32px, 3.2vw, 38px);
+      height: clamp(32px, 3.2vw, 38px);
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px rgba(181, 137, 59, 0.28));
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-name-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.15rem, 3.2vw, 1.55rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--teal-primary);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-tagline-sans {
+      font-size: clamp(0.48rem, 1.3vw, 0.60rem);
+      color: var(--teal-primary);
+      opacity: 0.88;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .back-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal-primary);
+      text-decoration: none;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: #ffffff;
+      padding: 9px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .back-nav-btn:hover {
+      background: var(--teal-primary);
+      color: #ffffff;
+      border-color: var(--teal-primary);
+    }
+
+    /* 2. COMPACT HERO HEADER */
+    .compact-hero-block {
+      margin-top: 12px;
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .eyebrow-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill-tag {
+      display: inline-block;
+      background: var(--gold-soft);
+      color: var(--gold-accent);
+      border: 1px solid var(--gold-border);
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .specialist-badge-top {
+      font-size: 0.70rem;
+      font-weight: 800;
+      color: var(--emerald-accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .compact-hero-block h1 {
+      font-size: clamp(2.1rem, 5.2vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.10;
+      color: var(--teal-primary);
+    }
+
+    /* 3. ZERO-BOX FLOATING 3D STAGE WITH SOFT CONTRAST VIGNETTE */
+    .anatomy-floating-stage {
+      width: 100%;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 12px 0 38px;
+      position: relative;
+    }
+
+    .comp-control-deck {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 420px) {
+      .comp-action-btn { font-size: 0.66rem; letter-spacing: 0.02em; }
+    }
+
+    .comp-action-btn {
+      appearance: none;
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 12px 10px;
+      text-align: center;
+      font-family: inherit;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      color: var(--text-main);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      line-height: 1.2;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comp-action-btn span:last-child {
+      font-size: 0.62rem;
+      font-weight: 600;
+      text-transform: none;
+      color: var(--text-muted);
+    }
+
+    .comp-action-btn:hover {
+      border-color: var(--teal-primary);
+      background: var(--teal-soft);
+    }
+
+    .comp-action-btn[aria-pressed="true"] {
+      background: var(--teal-primary);
+      border-color: var(--teal-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(10, 56, 52, 0.20);
+    }
+
+    .comp-action-btn[aria-pressed="true"] span:last-child {
+      color: #d8eee9;
+    }
+
+    /* PURE UNBOXED FLOATING VIEWPORT WITH TARGETED CONTRAST SPOTLIGHT */
+    .canvas-viewport-wrapper {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: none !important;
+      box-shadow: none !important;
+      background:
+        radial-gradient(
+          ellipse 70% 64% at 50% 50%,
+          rgba(54, 78, 75, 0.52) 0%,
+          rgba(30, 49, 47, 0.34) 48%,
+          rgba(8, 17, 16, 0.12) 80%
+        ),
+        linear-gradient(145deg, #172725 0%, #0d1a19 52%, #081110 100%) !important;
+    }
+
+    @media (min-width: 900px) {
+      .canvas-viewport-wrapper {
+        height: 370px;
+      }
+    }
+
+    #aligner-canvas-container {
+      width: 100%;
+      height: 100%;
+      touch-action: pan-y !important;
+      position: relative;
+      background: transparent;
+    }
+
+    #aligner-canvas-container canvas {
+      touch-action: pan-y !important;
+      display: block;
+      background: transparent;
+    }
+
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(250, 248, 244, 0.85);
+      backdrop-filter: blur(4px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 20;
+      transition: opacity 0.4s ease;
+    }
+
+    .loading-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .spinner {
+      width: 38px;
+      height: 38px;
+      border: 3px solid rgba(10, 56, 52, 0.15);
+      border-top-color: var(--teal-primary);
+      border-radius: 50%;
+      animation: spin 0.85s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .interaction-shield {
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 30px;
+      gap: 8px;
+      z-index: 10;
+      cursor: pointer;
+      transition: opacity 0.25s ease;
+    }
+
+    .interaction-shield.is-active {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .shield-badge {
+      background: #ffffff;
+      color: var(--teal-primary);
+      border: 1.5px solid var(--gold-border);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 9px 22px;
+      border-radius: 999px;
+      box-shadow: 0 4px 18px rgba(10, 56, 52, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .shield-subtext {
+      font-size: 0.70rem;
+      color: var(--teal-primary);
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    /* Floating 3D part labels (projected each frame) */
+    .part-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -140%);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #e3d5b8;
+      color: #0a3834;
+      font-size: 0.60rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 6;
+      box-shadow: 0 3px 12px rgba(10, 56, 52, 0.14);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .part-label::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 5px;
+      height: 5px;
+      margin: 3px 0 0 -2.5px;
+      border-radius: 50%;
+      background: #0a3834;
+    }
+
+    .viewer-hint {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--teal-primary);
+      background: rgba(255, 255, 255, 0.94);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 11px;
+      white-space: nowrap;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 8px rgba(10, 56, 52, 0.06);
+      pointer-events: none;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .viewer-tools {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-top: 14px;
+      padding: 0 4px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool {
+      background: #ffffff;
+      border: 1.2px solid var(--border-color);
+      color: var(--teal-primary);
+      font-family: inherit;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 7px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tool:hover {
+      background: var(--teal-soft);
+      border-color: var(--teal-primary);
+    }
+
+    .tool.tool-primary {
+      background: var(--teal-primary);
+      border-color: var(--teal-primary);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(10, 56, 52, 0.18);
+    }
+
+    .tool.tool-primary:hover {
+      background: var(--teal-hover);
+      border-color: var(--teal-hover);
+      color: #ffffff;
+    }
+
+    .canvas-viewport-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 55%, rgba(181, 137, 59, 0.24), transparent 62%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .canvas-viewport-wrapper.snap-flash::after {
+      opacity: 1;
+    }
+
+    .state-narrative-banner {
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      font-size: 0.82rem;
+      color: var(--text-main);
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.45;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* 4. PRICING TIERS */
+    .editorial-heading-group {
+      margin: 44px 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .editorial-subhead {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-accent);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .section-display-title {
+      font-size: clamp(1.75rem, 3.6vw, 2.4rem);
+      font-weight: 700;
+      color: var(--teal-primary);
+      line-height: 1.2;
+    }
+
+    .pricing-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 12px;
+      margin-bottom: 36px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-cards-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    .price-tier-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px 22px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .price-tier-card.featured {
+      background: var(--teal-soft);
+      border: 1.5px solid var(--teal-border);
+      color: var(--text-main);
+      box-shadow: 0 8px 24px -4px rgba(10, 56, 52, 0.10);
+    }
+
+    .price-tier-card.featured .price-tier-title {
+      color: var(--teal-primary);
+    }
+
+    .price-tier-card.featured .price-tier-figure {
+      color: var(--emerald-accent);
+    }
+
+    .price-tier-card.featured .price-tier-includes {
+      color: var(--text-muted);
+    }
+
+    .price-tier-card.featured::before {
+      content: 'MOST COMMON';
+      position: absolute;
+      top: -10px;
+      left: 18px;
+      background: var(--gold-primary);
+      color: #ffffff;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .price-tier-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal-primary);
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .price-tier-figure {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--emerald-accent);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .price-tier-includes {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.48;
+      font-weight: 500;
+    }
+
+    /* 5. COMPARISON TABLE */
+    .comp-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 14px 0 38px 0;
+      background: transparent;
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      min-width: 580px;
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comp-table th, .comp-table td {
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .comp-table th {
+      background: var(--bg-subtle);
+      font-weight: 800;
+      color: var(--teal-primary);
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+    }
+
+    .comp-table td strong { color: var(--teal-primary); }
+
+    /* 6. DOCTOR PROFILE */
+    .doctor-feature-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-top: 14px;
+      margin-bottom: 38px;
+      width: 100%;
+    }
+
+    .doctor-photo-frame {
+      position: relative;
+      width: 110px;
+      height: 132px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(10, 56, 52, 0.1);
+    }
+
+    .doctor-photo-rect {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    
+
+    .doctor-monogram {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #f5e0a3;
+      background: linear-gradient(135deg, #0a3834 0%, #155048 60%, #0a3834 100%);
+    }
+.doctor-photo-badge {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(10, 56, 52, 0.9);
+      color: #ffffff;
+      font-size: 0.46rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 4px;
+      text-align: center;
+    }
+
+    .doctor-details-block {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .doc-lead-eyebrow {
+      font-size: 0.66rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .doc-name-serif {
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--teal-primary);
+    }
+
+    .doc-degrees-line {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-top: 3px;
+    }
+
+    .doc-reg-number {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--emerald-accent);
+      margin-top: 1px;
+    }
+
+    .doc-institution-line {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.48;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    /* 7. FAQ ACCORDION */
+    .faq-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+      margin-bottom: 28px;
+      width: 100%;
+    }
+
+    details {
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: border-color 0.15s ease;
+    }
+
+    details[open] { border-color: var(--teal-border); }
+
+    summary {
+      padding: 16px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--teal-primary);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.15rem;
+      color: var(--gold-accent);
+      font-weight: 800;
+    }
+    details[open] summary::after { content: '−'; }
+
+    details p {
+      padding: 0 18px 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* 8. WHATSAPP BOOKING DESK */
+    .desk-card {
+      width: 100%;
+      background: #ffffff;
+      border: 2px solid var(--teal-primary);
+      border-radius: var(--radius-lg);
+      padding: clamp(24px, 3.5vw, 40px);
+      box-shadow: var(--shadow-desk);
+      margin-top: 36px;
+      text-align: center;
+      position: relative;
+    }
+
+    .desk-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #0a3834, #b5893b);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .desk-card h3 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--teal-primary);
+      margin-bottom: 6px;
+    }
+
+    .desk-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .whatsapp-booking-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto;
+      background: var(--teal-primary);
+      color: #ffffff !important;
+      padding: 16px 24px;
+      border-radius: var(--radius-md);
+      font-size: 0.94rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(10, 56, 52, 0.25);
+      transition: background-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .whatsapp-booking-btn:hover {
+      background: var(--teal-hover);
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-booking-btn svg { color: #25d366; }
+
+    .site-footer {
+      margin-top: 56px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      width: 100%;
+    }
+
+    /* 9. MOBILE FLOATING ACTION BAR */
+    .mobile-action-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(250, 248, 244, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-color);
+      padding: 12px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+      box-shadow: 0 -4px 12px rgba(10, 56, 52, 0.05);
+    }
+
+    @media (min-width: 900px) and (orientation: landscape) {
+      .mobile-action-bar { display: none; }
+    }
+
+    .mobile-call-btn, .mobile-book-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      padding: 13px 0;
+      font-weight: 700;
+    }
+
+    .mobile-call-btn {
+      flex: 1;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-color);
+      color: var(--text-main);
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+
+    .mobile-book-btn {
+      flex: 2;
+      background: var(--teal-primary);
+      color: #ffffff;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      border: none;
+      box-shadow: 0 4px 12px rgba(10, 56, 52, 0.2);
+    }
+    /* Mobile header fix: keep the full Perfect SMILE name visible and prevent nav overlap. */
+    @media (max-width: 600px) {
+      .site-nav-header {
+        gap: 8px;
+      }
+
+      .header-brand-link {
+        gap: 8px;
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .brand-text-block {
+        min-width: 0;
+      }
+
+      .brand-name-serif {
+        font-size: clamp(0.98rem, 4.1vw, 1.25rem);
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: clip;
+        letter-spacing: 0.02em;
+      }
+
+      .brand-tagline-sans {
+        font-size: clamp(0.40rem, 1.45vw, 0.52rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .back-nav-btn {
+        flex: 0 0 auto;
+        padding: 8px 9px;
+        font-size: 0.64rem;
+        letter-spacing: 0.025em;
+        gap: 4px;
+      }
+    }
+
+      .site-footer-inner { max-width: 760px; margin: 0 auto; }
+    .footer-brand { color: var(--teal-primary); letter-spacing: 0.04em; font-size: 0.95rem; margin-bottom: 10px; }
+    .footer-address, .footer-contact { margin: 6px 0; line-height: 1.65; }
+    .footer-contact a, .footer-nav a { color: var(--teal-primary); text-decoration: none; font-weight: 600; }
+    .footer-contact a:hover, .footer-nav a:hover { text-decoration: underline; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 6px 20px; justify-content: center; margin: 14px 0 6px; font-size: 0.82rem; }
+    .footer-legal { margin-top: 10px; font-size: 0.72rem; opacity: 0.85; }
+  </style>
+<style id="mint-clinic-directions-style">
+.get-directions-btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  background:#1769e0 !important;
+  color:#fff !important;
+  padding:14px 24px !important;
+  border-radius:10px !important;
+  font-size:16px !important;
+  font-weight:800 !important;
+  line-height:1.2 !important;
+  text-decoration:none !important;
+  box-shadow:0 5px 14px rgba(23,105,224,.25) !important;
+  min-height:50px !important;
+  border:0 !important;
+  cursor:pointer !important;
+}
+.get-directions-btn::before{
+  content:"" !important;
+  width:22px !important;
+  height:22px !important;
+  display:inline-block !important;
+  flex:0 0 22px !important;
+  background:url('https://maps.google.com/mapfiles/ms/icons/blue-dot.png') center/contain no-repeat !important;
+}
+.get-directions-btn:hover{
+  background:#0f56bf !important;
+  color:#fff !important;
+  transform:translateY(-1px) !important;
+}
+</style>
+<style id="header-back-button-fix">
+/* Clean one-row mobile header and compact back button */
+.site-nav-header {
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:10px !important;
+  min-width:0 !important;
+}
+.header-brand-link {
+  min-width:0 !important;
+  flex:1 1 auto !important;
+}
+.back-nav-btn {
+  flex:0 0 auto !important;
+  white-space:nowrap !important;
+  max-width:fit-content !important;
+}
+@media (max-width:600px) {
+  .site-nav-header { gap:6px !important; }
+  .header-brand-link { gap:6px !important; }
+  .gold-tooth-icon { width:30px !important; height:30px !important; }
+  .brand-name-serif {
+    font-size:0.92rem !important;
+    letter-spacing:0.01em !important;
+  }
+  .brand-tagline-sans {
+    font-size:0.40rem !important;
+    letter-spacing:0.06em !important;
+  }
+  .back-nav-btn {
+    padding:7px 8px !important;
+    font-size:0.58rem !important;
+    letter-spacing:0.01em !important;
+    gap:3px !important;
+  }
+}
+</style>
+<style id="smooth-scroll">body{scroll-behavior:smooth;}</style>
+<style id="mobile-3d-performance">
+  .canvas-viewport-wrapper, #aligner-canvas-container, #scene {
+    contain: layout paint style;
+  }
+  .canvas-viewport-wrapper canvas,
+  #aligner-canvas-container canvas {
+    touch-action: pan-y;
+  }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many hours a day must I wear my aligners?","acceptedAnswer":{"@type":"Answer","text":"To achieve optimal tooth movement on schedule, aligners must be worn for 20 to 22 hours per day. You remove them solely for eating meals, drinking hot beverages, and brushing your teeth."}},{"@type":"Question","name":"Is clear aligner treatment painful?","acceptedAnswer":{"@type":"Answer","text":"No. You will feel a mild pressure for the first 24 to 48 hours of wearing a new tray, which indicates your teeth are gently shifting into position. There are no sharp metal brackets to cut your gums or cheeks."}},{"@type":"Question","name":"Can aligners fix complex crowding or bite issues?","acceptedAnswer":{"@type":"Answer","text":"Yes. Modern digital aligners utilize custom tooth attachments and precision biomechanics to address rotations, deep bites, overbites, and severe crowding effectively."}},{"@type":"Question","name":"Do you offer flexible staged payments for aligners?","acceptedAnswer":{"@type":"Answer","text":"Yes. Orthodontic payments are conveniently spread across your appointment milestones throughout active treatment."}}]}</script>
+<link href="site.css" rel="stylesheet"/>
+<script defer="" src="site.js"></script>
+</head>
+<body>
+<!-- 1. HEADER (SMART BACK NAVIGATION) -->
+<header class="site-nav-header fluid-section-band">
+<a aria-label="Perfect SMILE Home" class="header-brand-link" href="index.html">
+<svg aria-hidden="true" class="gold-tooth-icon" fill="none" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="apexGoldShine" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#f5e0a3"></stop>
+<stop offset="40%" stop-color="#b5893b"></stop>
+<stop offset="80%" stop-color="#8a611c"></stop>
+<stop offset="100%" stop-color="#d6ab58"></stop>
+</lineargradient>
+</defs>
+<path d="M10 4C6.5 4 4 6.8 4 10.8c0 5.2 2.6 11 4.7 16.6.7 2 2.8 2.6 4.1 1.3 1.6-1.6 2.4-4 3.2-6.7.8 2.7 1.6 5.1 3.2 6.7 1.3 1.3 3.4.7 4.1-1.3C25.4 21.8 28 16 28 10.8 28 6.8 25.5 4 22 4c-3.1 0-5 2-6 2s-2.9-2-6-2z" fill="url(#apexGoldShine)" stroke="#8a611c" stroke-width="0.8"></path>
+<path d="M19 8 L20 6 L21 8 L23 9 L21 10 L20 12 L19 10 L17 9 Z" fill="#ffffff"></path>
+</svg>
+<div class="brand-text-block">
+<span class="brand-name-serif">Perfect SMILE</span>
+<span class="brand-tagline-sans">Bus Stand Road · Rohtak</span>
+</div>
+</a>
+<a aria-label="Back to Treatments &amp; Cost" class="back-nav-btn" href="index.html#treatments" onclick="if(window.history.length &gt; 1 &amp;&amp; document.referrer.includes(window.location.host)){ window.history.back(); return false; }">
+<span>← Treatments &amp; Cost</span>
+</a>
+</header>
+<main class="fluid-section-band">
+<!-- 2. COMPACT HERO -->
+<section aria-label="Orthodontic Header" class="compact-hero-block">
+<div class="eyebrow-badge-row">
+<span class="pill-tag">Digital Orthodontics</span>
+<span class="specialist-badge-top">Dr. Prvish Rathee</span>
+</div>
+<h1 class="serif-title">Clear Aligners vs. Metal Braces</h1>
+</section>
+<!-- 3. ZERO-BOX FLOATING 3D SHOWROOM -->
+<section aria-label="Clear Aligners vs Braces 3D Explorer" class="anatomy-floating-stage" id="comparisonCard">
+<!-- Interactive 3-State Controller Deck -->
+<div class="comp-control-deck" role="tablist">
+<button aria-pressed="true" class="comp-action-btn" id="btnBareTeeth" role="tab" type="button">
+<span>1. Natural Teeth</span>
+<span>Both floating</span>
+</button>
+<button aria-pressed="false" class="comp-action-btn" id="btnWearAligner" role="tab" type="button">
+<span>2. Invisible</span>
+<span>Clear aligner</span>
+</button>
+<button aria-pressed="false" class="comp-action-btn" id="btnWearBraces" role="tab" type="button">
+<span>3. Metal</span>
+<span>Metal braces</span>
+</button>
+</div>
+<div class="canvas-viewport-wrapper">
+<div class="loading-overlay" id="loadingOverlay">
+<div class="spinner"></div>
+</div>
+<div id="aligner-canvas-container"></div>
+<!-- Safe Mobile Scrolling Shield -->
+<div class="interaction-shield" id="interactionShield">
+<div class="shield-badge">
+<span>✦ Tap to Rotate 3D Model ✦</span>
+</div>
+<span class="shield-subtext">Touch and drag freely once unlocked</span>
+</div>
+<div class="viewer-hint">↔ Drag to rotate · Pinch / wheel to zoom</div>
+</div>
+<div class="viewer-tools">
+<span>Interactive 3D aligner explorer</span>
+<div class="tool-row">
+<button class="tool tool-primary" id="playDemoBtn" type="button">▶ PLAY COMPARISON</button>
+<button class="tool" id="resetViewBtn" type="button">RESET VIEW</button>
+</div>
+</div>
+<div class="state-narrative-banner" id="stateNarrativeBanner">
+        Current View: Natural teeth. Both appliances float above the arch. Tap one to try it on.
+      </div>
+</section>
+<!-- 4. TRANSPARENT PRICING TIERS -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Orthodontic Pricing</span>
+<h2 class="section-display-title serif-title">Transparent Procedural Estimates</h2>
+</div>
+</div>
+<section aria-label="Aligner Pricing Breakdown" class="pricing-cards-grid">
+<div class="price-tier-card">
+<div>
+<h3 class="price-tier-title">Mild Alignment (Cosmetic Care)</h3>
+<div class="price-tier-figure">₹45,000 – ₹65,000</div>
+</div>
+<p class="price-tier-includes">
+          Ideal for minor front tooth crowding, small midline gaps, or minor relapse from past orthodontic care. Duration: 4–6 months.
+         · Emergency Reception: <a href="tel:+919254441687">+91 92544 41687</a></p>
+</div>
+<div class="price-tier-card featured">
+<div>
+<h3 class="price-tier-title">Comprehensive Alignment</h3>
+<div class="price-tier-figure">₹75,000 – ₹1,20,000</div>
+</div>
+<p class="price-tier-includes">
+          Full dual-arch correction for moderate to severe crowding, overbites, deep bites, and crossbites. Duration: 8–14 months.
+        </p>
+</div>
+<div class="price-tier-card">
+<div>
+<h3 class="price-tier-title">Retention Trays (Post-Care)</h3>
+<div class="price-tier-figure">₹8,000 – ₹15,000</div>
+</div>
+<p class="price-tier-includes">
+          Custom high-durability transparent night retainers to permanently lock your straightened smile in place for life.
+        </p>
+</div>
+</section>
+<!-- 5. COMPARISON TABLE -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Clinical Decision</span>
+<h2 class="section-display-title serif-title">Clear Aligners vs. Metal Braces</h2>
+</div>
+</div>
+<section aria-label="Comparison Table" class="comp-table-wrap">
+<table class="comp-table">
+<thead>
+<tr>
+<th>Clinical Metric</th>
+<th>Clear Aligners</th>
+<th>Traditional Metal Braces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aesthetic Appearance</strong></td>
+<td><strong>Virtually Invisible</strong> (Transparent medical polymer)</td>
+<td><strong>Highly Visible</strong> (Metallic brackets and dark wires)</td>
+</tr>
+<tr>
+<td><strong>Removability &amp; Diet</strong></td>
+<td><strong>100% Removable</strong> (Eat whatever you like freely)</td>
+<td><strong>Fixed</strong> (Restricted: no sticky, hard, or crunchy foods)</td>
+</tr>
+<tr>
+<td><strong>Soft Tissue Comfort</strong></td>
+<td><strong>Smooth Edges</strong> (Laser-trimmed, zero cheek cuts)</td>
+<td><strong>Frequent Ulcers</strong> (Sharp brackets and wires rub cheeks)</td>
+</tr>
+<tr>
+<td><strong>Daily Oral Hygiene</strong></td>
+<td><strong>Normal Brushing</strong> (Floss normally without hassle)</td>
+<td><strong>Difficult</strong> (Requires threaders &amp; special brushes)</td>
+</tr>
+<tr>
+<td><strong>Clinic Visit Frequency</strong></td>
+<td><strong>Every 6 to 8 Weeks</strong> (Brief progress checks)</td>
+<td><strong>Frequent</strong> (Emergency visits for broken wires/brackets)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- 6. DOCTOR PROFILE -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Supervising Specialist</span>
+<h2 class="section-display-title serif-title">Clinical Leadership</h2>
+</div>
+</div>
+<div aria-label="Supervising Doctor Profile" class="doctor-feature-entry">
+<div class="doctor-photo-frame">
+<div aria-label="PR logo" class="doctor-monogram">PR</div>
+<div class="doctor-photo-badge">DR. PRVISH RATHEE</div>
+</div>
+<div class="doctor-details-block">
+<span class="doc-lead-eyebrow">Lead Dental Surgeon</span>
+<h3 class="doc-name-serif serif-title">Dr. Prvish Rathee</h3>
+<p class="doc-degrees-line">BDS, MIDA – PGIMS</p>
+<p class="doc-reg-number">Lead Dental Surgeon</p>
+<p class="doc-institution-line">Dr. Prvish Rathee is a Dental Surgeon focusing on preventative, implant, and restorative care.</p>
+</div>
+</div>
+<!-- 7. FREQUENTLY ASKED QUESTIONS -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Patient Inquiries</span>
+<h2 class="section-display-title serif-title">Frequently Asked Questions</h2>
+</div>
+</div>
+<section aria-label="Patient Questions" class="faq-accordion">
+<details>
+<summary>How many hours a day must I wear my aligners?</summary>
+<p>
+          To achieve optimal tooth movement on schedule, aligners must be worn for 20 to 22 hours per day. You remove them solely for eating meals, drinking hot beverages, and brushing your teeth.
+        </p>
+</details>
+<details>
+<summary>Is clear aligner treatment painful?</summary>
+<p>
+          No. You will feel a mild pressure for the first 24 to 48 hours of wearing a new tray, which indicates your teeth are gently shifting into position. There are no sharp metal brackets to cut your gums or cheeks.
+        </p>
+</details>
+<details>
+<summary>Can aligners fix complex crowding or bite issues?</summary>
+<p>
+          Yes. Modern digital aligners utilize custom tooth attachments and precision biomechanics to address rotations, deep bites, overbites, and severe crowding effectively.
+        </p>
+</details>
+<details>
+<summary>Do you offer flexible staged payments for aligners?</summary>
+<p>
+          Yes. Orthodontic payments are conveniently spread across your appointment milestones throughout active treatment.
+        </p>
+</details>
+</section>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p class="footer-brand serif-title">Perfect SMILE · DR. PRVISH RATHEE</p>
+<p class="footer-address">Indira Market, Opposite Radhe Radhe Park, Near Oxygen Hospital, Babra Mohalla, Rohtak, Haryana 124001</p>
+<p class="footer-contact">Direct Reception: <a href="tel:+919253993999">+91 92539 93999</a> · Hours: Monday to Saturday: 9:30 AM – 2:00 PM | 4:00 PM – 6:30 PM (Sunday: 10:00 AM – 12:00 PM By Appointment) <span class="opd-pill" data-opd="">Checking…</span></p>
+<nav aria-label="Footer SEO navigation" class="footer-nav"><a href="index.html">Home</a><a href="implants.html">Dental Implants 3D</a><a href="aligners.html">Clear Aligners 3D</a><a href="root-canal.html">Root Canal Treatment</a><a href="crowns.html">Dental Crowns</a><a href="veneers.html">Smile Makeover and Porcelain Veneers</a><a href="checkup.html">Dental Check-up and Teeth Cleaning</a><a href="dentist-near-model-town-rohtak.html">Dentist near Model Town, Rohtak</a><a href="dentist-near-d-park-rohtak.html">Dentist near D-Park</a><a href="dentist-near-delhi-road-rohtak.html">Dentist near Delhi Road</a><a href="dentist-near-pgims-rohtak.html">Dentist near PGIMS</a><a href="dentist-near-babra-mohalla-rohtak.html">Dentist near Babra Mohalla</a><a href="dentist-near-indira-market-rohtak.html">Dentist near Indira Market</a></nav>
+<p class="footer-legal">© 2026 Perfect SMILE. All surgical and restorative procedures performed by registered dental surgeons.</p>
+</div>
+</footer>
+</main>
+<!-- 9. MOBILE FLOATING ACTION BAR -->
+<div class="mobile-action-bar">
+<a class="mobile-call-btn" href="tel:+919253993999"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>Call</span></a>
+<a class="mobile-call-btn" href="https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Directions</span></a>
+<a class="mobile-book-btn" href="https://wa.me/919034467399?text=Hello%20Dr.%20Neha%20Chhikara%2C%20I%20reviewed%20the%203D%20Clear%20Aligners%20guide%20on%20your%20website%20and%20would%20like%20to%20schedule%20an%20orthodontic%20consultation." rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg><span>Book on WhatsApp</span></a>
+</div>
+<!-- ==========================================================
+       THREE.JS STUDIO ENGINE (PRECISE LIGHTING & ANATOMY)
+  =========================================================== -->
+<script>
+    (function () {
+      "use strict";
+
+      const container = document.getElementById('aligner-canvas-container');
+      const shield = document.getElementById('interactionShield');
+      const compCard = document.getElementById('comparisonCard');
+      const loadingOverlay = document.getElementById('loadingOverlay');
+      const resetViewBtn = document.getElementById('resetViewBtn');
+
+      if (!container) return;
+
+      // 1. Scene & Camera Setup
+      const scene = new THREE.Scene();
+
+      const camera = new THREE.PerspectiveCamera(
+        35,
+        container.clientWidth / container.clientHeight,
+        0.1,
+        100
+      );
+      camera.position.set(2.55, 1.95, 3.25);
+
+      const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+        powerPreference: "high-performance"
+      });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.35));
+      renderer.setClearColor(0x000000, 0);
+      renderer.outputEncoding = THREE.sRGBEncoding;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.0;
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      container.appendChild(renderer.domElement);
+
+      const controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.06;
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 0.55;
+      controls.enablePan = false;
+      controls.minDistance = 1.7;
+      controls.maxDistance = 6.2;
+      controls.maxPolarAngle = Math.PI / 2 + 0.1;
+      controls.target.set(0, 0.15, 0);
+      controls.enabled = false;
+
+      // 2. High-Contrast Studio Lighting
+      scene.add(new THREE.HemisphereLight(0xffffff, 0xcfc4b2, 1.1));
+
+      const keyLight = new THREE.DirectionalLight(0xfffaee, 1.7);
+      keyLight.position.set(4, 7, 5);
+      keyLight.castShadow = true;
+      keyLight.shadow.mapSize.set(1024, 1024);
+      keyLight.shadow.camera.near = 1;
+      keyLight.shadow.camera.far = 16;
+      keyLight.shadow.bias = -0.0015;
+      keyLight.shadow.radius = 3.5;
+      scene.add(keyLight);
+
+      const fillLight = new THREE.DirectionalLight(0xd9ece7, 0.80);
+      fillLight.position.set(-5, 2.5, 4);
+      scene.add(fillLight);
+
+      const rimLight = new THREE.DirectionalLight(0xffe6b0, 0.90);
+      rimLight.position.set(0, 4, -5);
+      scene.add(rimLight);
+
+      // Studio Reflection Map
+      function buildStudioEnvironment(){
+        const size = 256;
+        const c = document.createElement('canvas');
+        c.width = size; c.height = size;
+        const ctx = c.getContext('2d');
+        const grad = ctx.createLinearGradient(0, 0, 0, size);
+        grad.addColorStop(0, '#ffffff');
+        grad.addColorStop(0.5, '#eee6da');
+        grad.addColorStop(1, '#c0d4d0');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, size, size);
+        const tex = new THREE.CanvasTexture(c);
+        tex.mapping = THREE.EquirectangularReflectionMapping;
+        tex.encoding = THREE.sRGBEncoding;
+        const pmrem = new THREE.PMREMGenerator(renderer);
+        pmrem.compileEquirectangularShader();
+        const envMap = pmrem.fromEquirectangular(tex).texture;
+        tex.dispose();
+        pmrem.dispose();
+        return envMap;
+      }
+      try {
+        scene.environment = buildStudioEnvironment();
+      } catch (e) { }
+
+      // 3. Model Roots
+      const rootArchGroup = new THREE.Group();
+      rootArchGroup.position.set(0, -0.22, 0.0);
+      rootArchGroup.scale.set(0.78, 0.78, 0.78);
+      scene.add(rootArchGroup);
+
+      const naturalGroup = new THREE.Group();
+      const alignerGroup = new THREE.Group();
+      const bracesGroup = new THREE.Group();
+
+      rootArchGroup.add(naturalGroup, alignerGroup, bracesGroup);
+
+      // Grounding Contact Shadow
+      const shadowCanvas = document.createElement('canvas');
+      shadowCanvas.width = 128;
+      shadowCanvas.height = 128;
+      const sCtx = shadowCanvas.getContext('2d');
+      const gradient = sCtx.createRadialGradient(64, 64, 0, 64, 64, 60);
+      gradient.addColorStop(0, 'rgba(20, 35, 32, 0.32)');
+      gradient.addColorStop(0.38, 'rgba(20, 35, 32, 0.12)');
+      gradient.addColorStop(0.75, 'rgba(20, 35, 32, 0.02)');
+      gradient.addColorStop(1, 'rgba(20, 35, 32, 0)');
+      sCtx.fillStyle = gradient;
+      sCtx.fillRect(0, 0, 128, 128);
+
+      const shadowTexture = new THREE.CanvasTexture(shadowCanvas);
+      const shadowPlane = new THREE.Mesh(
+        new THREE.PlaneGeometry(5.2, 3.6),
+        new THREE.MeshBasicMaterial({
+          map: shadowTexture,
+          transparent: true,
+          depthWrite: false
+        })
+      );
+      shadowPlane.rotation.x = -Math.PI / 2;
+      shadowPlane.position.set(0, -1.02, 0.0);
+      rootArchGroup.add(shadowPlane);
+
+      // 4. Contrast Materials
+      function grainTexture(size, strength){
+        const c = document.createElement('canvas');
+        c.width = c.height = size;
+        const ctx = c.getContext('2d');
+        const img = ctx.createImageData(size, size);
+        for(let i = 0; i < img.data.length; i += 4){
+          const v = 128 + (Math.random() - 0.5) * 255 * strength;
+          img.data[i] = img.data[i+1] = img.data[i+2] = v;
+          img.data[i+3] = 255;
+        }
+        ctx.putImageData(img, 0, 0);
+        const tex = new THREE.CanvasTexture(c);
+        tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+        tex.repeat.set(5, 5);
+        return tex;
+      }
+      const gumGrain = grainTexture(128, .25);
+      const enamelGrain = grainTexture(64, .08);
+
+      const toothEnamelMat = new THREE.MeshPhysicalMaterial({
+        color: 0xf5efe4,
+        roughness: 0.16,
+        metalness: 0.0,
+        clearcoat: 0.85,
+        clearcoatRoughness: 0.06,
+        reflectivity: 0.92,
+        bumpMap: enamelGrain,
+        bumpScale: 0.002,
+        envMapIntensity: 0.95
+      });
+
+      const gumMat = new THREE.MeshPhysicalMaterial({
+        color: 0xd9687e,
+        roughness: 0.44,
+        metalness: 0.0,
+        clearcoat: 0.28,
+        clearcoatRoughness: 0.16,
+        bumpMap: gumGrain,
+        bumpScale: 0.007,
+        envMapIntensity: 0.5
+      });
+
+      const boneBaseMat = new THREE.MeshStandardMaterial({
+        color: 0xded2bd,
+        roughness: 0.75,
+        envMapIntensity: 0.35
+      });
+
+      // Clear Aligner: 100% White Medical Polymer
+      const clearAlignerMat = new THREE.MeshPhysicalMaterial({
+        color: 0xffffff,
+        transparent: true,
+        opacity: 0.58,
+        roughness: 0.05,
+        metalness: 0.08,
+        transmission: 0.45,
+        thickness: 0.65,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.02,
+        reflectivity: 1.0,
+        ior: 1.52,
+        depthWrite: false,
+        side: THREE.DoubleSide,
+        envMapIntensity: 1.6
+      });
+
+      // Metal Braces
+      const bracketMat = new THREE.MeshPhysicalMaterial({
+        color: 0x4a5860,
+        metalness: 0.94,
+        roughness: 0.18,
+        clearcoat: 0.45,
+        clearcoatRoughness: 0.08,
+        envMapIntensity: 1.3
+      });
+
+      const bracketDarkMat = new THREE.MeshStandardMaterial({
+        color: 0x273136,
+        metalness: 0.96,
+        roughness: 0.22,
+        envMapIntensity: 1.2
+      });
+
+      const archWireMat = new THREE.MeshPhysicalMaterial({
+        color: 0x3d484e,
+        metalness: 0.98,
+        roughness: 0.10,
+        clearcoat: 0.65,
+        envMapIntensity: 1.4
+      });
+
+      const ligatureMat = new THREE.MeshPhysicalMaterial({
+        color: 0x728389,
+        metalness: 0.25,
+        roughness: 0.35
+      });
+
+      // 5. Crown Geometry Helper
+      function deformRoundedBox(geom, w, h, d, type) {
+        const pos = geom.attributes.position;
+        const v = new THREE.Vector3();
+
+        for (let i = 0; i < pos.count; i++) {
+          v.fromBufferAttribute(pos, i);
+
+          const nx = v.x / (w * 0.5);
+          const ny = v.y / (h * 0.5);
+          const nz = v.z / (d * 0.5);
+
+          const corner = Math.max(0, Math.abs(nx) + Math.abs(nz) - 1.15);
+          v.x *= 1.0 - corner * 0.12;
+          v.z *= 1.0 - corner * 0.16;
+
+          if (ny < -0.05) {
+            const t = Math.min(1, Math.abs(ny + 0.05) / 0.95);
+            v.x *= 1.0 - 0.13 * t;
+            v.z *= 1.0 - 0.09 * t;
+          }
+
+          if (type === 'incisor') {
+            v.z *= 0.88;
+            if (ny > 0.45) v.y += 0.022;
+          } else if (type === 'canine') {
+            v.z *= 0.94;
+            if (ny > 0.22) v.y += 0.038 * (1 - Math.abs(nx));
+          } else if (type === 'premolar') {
+            const cusp = Math.cos(nx * Math.PI * 1.05) * 0.032;
+            if (ny > 0.05) v.y += cusp + Math.abs(nx) * 0.015;
+          } else {
+            const cuspA = Math.cos(nx * Math.PI * 1.15) * 0.032;
+            const cuspB = Math.cos(nz * Math.PI * 1.15) * 0.026;
+            if (ny > 0.02) v.y += cuspA + cuspB;
+          }
+
+          pos.setXYZ(i, v.x, v.y, v.z);
+        }
+
+        geom.computeVertexNormals();
+        return geom;
+      }
+
+      function createCrown(meta) {
+        let crownGeom;
+        if (meta.type === 'incisor') crownGeom = deformRoundedBox(new THREE.BoxGeometry(meta.w, meta.h, meta.d, 10, 10, 10), meta.w, meta.h, meta.d, 'incisor');
+        else if (meta.type === 'canine') crownGeom = deformRoundedBox(new THREE.BoxGeometry(meta.w, meta.h, meta.d, 10, 10, 10), meta.w, meta.h, meta.d, 'canine');
+        else if (meta.type === 'premolar') crownGeom = deformRoundedBox(new THREE.BoxGeometry(meta.w, meta.h, meta.d, 10, 10, 10), meta.w, meta.h, meta.d, 'premolar');
+        else crownGeom = deformRoundedBox(new THREE.BoxGeometry(meta.w, meta.h, meta.d, 12, 12, 12), meta.w, meta.h, meta.d, 'molar');
+
+        const crownMesh = new THREE.Mesh(crownGeom, toothEnamelMat);
+        crownMesh.position.y = meta.h * 0.45;
+        crownMesh.castShadow = true;
+        crownMesh.receiveShadow = true;
+        return crownMesh;
+      }
+
+      const teethMeta = [
+        { type: 'incisor',  w: 0.36, h: 0.50, d: 0.32, buccal: 0.16 },
+        { type: 'incisor',  w: 0.32, h: 0.48, d: 0.30, buccal: 0.155 },
+        { type: 'canine',   w: 0.34, h: 0.56, d: 0.33, buccal: 0.17 },
+        { type: 'premolar', w: 0.37, h: 0.48, d: 0.35, buccal: 0.18 },
+        { type: 'premolar', w: 0.39, h: 0.46, d: 0.37, buccal: 0.19 },
+        { type: 'molar',    w: 0.45, h: 0.44, d: 0.42, buccal: 0.21 },
+        { type: 'molar',    w: 0.43, h: 0.42, d: 0.40, buccal: 0.20 }
+      ];
+
+      // 6. Build Dental Arch & Gums
+      const toothWorldPositions = [];
+
+      for (let side = -1; side <= 1; side += 2) {
+        for (let i = 0; i < 7; i++) {
+          const m = teethMeta[i];
+          const u = (i + 0.42) / 7.0;
+          const angle = side * (u * 1.28);
+
+          const radiusX = 1.10 + u * 0.44;
+          const radiusZ = 1.12 + u * 0.20;
+
+          const x = Math.sin(angle) * radiusX;
+          const z = Math.cos(angle) * radiusZ - 1.05;
+          const y = 0.05;
+          const rotY = angle * 0.52;
+
+          const crown = createCrown(m);
+          crown.position.set(x, y, z);
+          crown.rotation.y = rotY;
+          naturalGroup.add(crown);
+
+          toothWorldPositions.push({ x, y, z, rotY, meta: m, side, index: i, crown });
+        }
+      }
+
+      const gumPts = [];
+      for (let k = -42; k <= 42; k++) {
+        const t = k / 42;
+        const side = t < 0 ? -1 : 1;
+        const a = side * Math.abs(t) * 1.30;
+        const rx = 1.08 + Math.abs(t) * 0.45;
+        const rz = 1.14 + Math.abs(t) * 0.20;
+        gumPts.push(new THREE.Vector3(
+          Math.sin(a) * rx,
+          -0.08,
+          Math.cos(a) * rz - 1.05
+        ));
+      }
+      const gumCurve = new THREE.CatmullRomCurve3(gumPts);
+      
+      const gumRidge = new THREE.Mesh(
+        new THREE.TubeGeometry(gumCurve, 100, 0.24, 20, false),
+        gumMat
+      );
+      gumRidge.scale.set(1.0, 0.72, 1.0);
+      gumRidge.castShadow = true;
+      gumRidge.receiveShadow = true;
+      naturalGroup.add(gumRidge);
+
+      const baseRidge = new THREE.Mesh(
+        new THREE.TubeGeometry(gumCurve, 80, 0.32, 18, false),
+        boneBaseMat
+      );
+      baseRidge.position.y = -0.32;
+      baseRidge.scale.set(1.04, 0.85, 1.04);
+      baseRidge.receiveShadow = true;
+      naturalGroup.add(baseRidge);
+
+      // 7. Pure White Clear Aligner Shell
+      const alignerShells = [];
+
+      toothWorldPositions.forEach((d) => {
+        const m = d.meta;
+
+        let shellGeom;
+        if (m.type === 'incisor') shellGeom = deformRoundedBox(new THREE.BoxGeometry(m.w + 0.05, m.h + 0.04, m.d + 0.055, 10, 10, 10), m.w + 0.05, m.h + 0.04, m.d + 0.055, 'incisor');
+        else if (m.type === 'canine') shellGeom = deformRoundedBox(new THREE.BoxGeometry(m.w + 0.05, m.h + 0.04, m.d + 0.055, 10, 10, 10), m.w + 0.05, m.h + 0.04, m.d + 0.055, 'canine');
+        else if (m.type === 'premolar') shellGeom = deformRoundedBox(new THREE.BoxGeometry(m.w + 0.05, m.h + 0.04, m.d + 0.055, 10, 10, 10), m.w + 0.05, m.h + 0.04, m.d + 0.055, 'premolar');
+        else shellGeom = deformRoundedBox(new THREE.BoxGeometry(m.w + 0.05, m.h + 0.04, m.d + 0.055, 12, 12, 12), m.w + 0.05, m.h + 0.04, m.d + 0.055, 'molar');
+
+        const shell = new THREE.Mesh(shellGeom, clearAlignerMat);
+        shell.position.set(d.x, d.y + 0.085, d.z);
+        shell.rotation.y = d.rotY;
+        shell.scale.set(0.99, 0.72, 1.0);
+
+        alignerGroup.add(shell);
+        alignerShells.push(shell);
+      });
+
+      const alignerFlange = new THREE.Mesh(
+        new THREE.TubeGeometry(gumCurve, 90, 0.16, 16, false),
+        clearAlignerMat
+      );
+      alignerFlange.position.y = 0.06;
+      alignerGroup.add(alignerFlange);
+
+      // 8. Metal Braces & Archwire
+      const bracketUnits = [];
+      const wirePoints = [];
+      const wireOrder = toothWorldPositions.slice().sort((a,b) => a.x - b.x);
+
+      wireOrder.forEach((d) => {
+        const m = d.meta;
+        const unit = new THREE.Group();
+        const bracketY = d.y + m.h * 0.42;
+
+        unit.position.set(d.x, bracketY, d.z);
+        unit.rotation.y = d.rotY;
+
+        const base = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.085, 0.045, 2, 2, 2), bracketMat);
+        base.position.set(0, 0, m.buccal + 0.025);
+        base.castShadow = true;
+        unit.add(base);
+
+        const slot = new THREE.Mesh(new THREE.BoxGeometry(0.075, 0.024, 0.052, 2, 2, 2), bracketDarkMat);
+        slot.position.set(0, 0, m.buccal + 0.057);
+        unit.add(slot);
+
+        const wingL = new THREE.Mesh(new THREE.BoxGeometry(0.026, 0.105, 0.042, 2, 2, 2), bracketMat);
+        wingL.position.set(-0.045, 0, m.buccal + 0.045);
+        wingL.castShadow = true;
+        unit.add(wingL);
+
+        const wingR = new THREE.Mesh(new THREE.BoxGeometry(0.026, 0.105, 0.042, 2, 2, 2), bracketMat);
+        wingR.position.set(0.045, 0, m.buccal + 0.045);
+        wingR.castShadow = true;
+        unit.add(wingR);
+
+        const lig = new THREE.Mesh(new THREE.TorusGeometry(0.042, 0.010, 8, 18), ligatureMat);
+        lig.position.set(0, 0, m.buccal + 0.066);
+        lig.rotation.x = Math.PI / 2;
+        unit.add(lig);
+
+        bracesGroup.add(unit);
+
+        const slotPoint = new THREE.Vector3(0, 0, m.buccal + 0.066);
+        slotPoint.applyAxisAngle(new THREE.Vector3(0, 1, 0), d.rotY);
+        slotPoint.add(new THREE.Vector3(d.x, bracketY, d.z));
+        wirePoints.push(slotPoint);
+        bracketUnits.push(unit);
+      });
+
+      const wireCurve = new THREE.CatmullRomCurve3(wirePoints);
+      const archWireMesh = new THREE.Mesh(new THREE.TubeGeometry(wireCurve, 100, 0.018, 10, false), archWireMat);
+      archWireMesh.castShadow = true;
+      bracesGroup.add(archWireMesh);
+
+      // ---------- Floating 3D Part Labels (track appliances) ----------
+      const viewportEl = document.querySelector('.canvas-viewport-wrapper');
+      function makeAnchor(parent, x, y, z){
+        const o = new THREE.Object3D();
+        o.position.set(x, y, z);
+        parent.add(o);
+        return o;
+      }
+      const bracketAnchor = makeAnchor(bracketUnits[0], 0, 0.17, 0.08);
+      const wireAnchor = makeAnchor(bracesGroup, 0, 0, 0);
+      wireCurve.getPoint(0.12, wireAnchor.position);
+      wireAnchor.position.y += 0.10;
+      const trayAnchor = makeAnchor(alignerGroup, 0, 0.55, 0.30);
+
+      const partLabels = [
+        { text: 'Metal Bracket', anchor: bracketAnchor, mode: 'braces' },
+        { text: 'Ni-Ti Archwire', anchor: wireAnchor, mode: 'braces' },
+        { text: 'Clear Aligner Tray', anchor: trayAnchor, mode: 'aligner' }
+      ];
+      partLabels.forEach(l => {
+        const el = document.createElement('div');
+        el.className = 'part-label';
+        el.textContent = l.text;
+        viewportEl.appendChild(el);
+        l.el = el;
+      });
+      const _lv2 = new THREE.Vector3();
+      function updatePartLabels(){
+        const w = viewportEl.clientWidth, h = viewportEl.clientHeight;
+        partLabels.forEach(l => {
+          if(activeAppliance !== l.mode){ l.el.style.opacity = '0'; return; }
+          l.anchor.getWorldPosition(_lv2).project(camera);
+          if(_lv2.z > 1){ l.el.style.opacity = '0'; return; }
+          l.el.style.opacity = '1';
+          l.el.style.left = ((_lv2.x * 0.5 + 0.5) * w).toFixed(1) + 'px';
+          l.el.style.top = ((-_lv2.y * 0.5 + 0.5) * h).toFixed(1) + 'px';
+        });
+      }
+
+      // 9. Dual-Appliance Engine
+      const HOVER_Y = 0.86;
+      const DROP_Y = 1.42;
+
+      let activeAppliance = 'none';
+
+      function makePart(group, hoverY, phase) {
+        group.visible = true;
+        group.position.set(0, hoverY, 0);
+        return { group, hoverY, phase, y: hoverY, from: hoverY, to: hoverY, t0: 0, dur: 1, worn: false, done: true };
+      }
+
+      const alignerPart = makePart(alignerGroup, HOVER_Y, 0);
+      const bracesPart = makePart(bracesGroup, DROP_Y, 1.7);
+
+      function moveTo(part, worn, delay) {
+        if (part.worn === worn) return;
+        part.worn = worn;
+        part.from = part.y;
+        part.to = worn ? 0 : part.hoverY;
+        part.t0 = performance.now() / 1000 + delay;
+        part.dur = worn ? 1.45 : 1.0;
+        part.done = false;
+      }
+
+      function setAppliance(next) {
+        if (next === activeAppliance) return;
+        const delay = (activeAppliance !== 'none' && next !== 'none') ? 0.8 : 0;
+        moveTo(alignerPart, next === 'aligner', next === 'aligner' ? delay : 0);
+        moveTo(bracesPart, next === 'braces', next === 'braces' ? delay : 0);
+        activeAppliance = next;
+      }
+
+      if (loadingOverlay) {
+        setTimeout(() => loadingOverlay.classList.add('hidden'), 400);
+      }
+
+      shield.addEventListener('click', () => {
+        shield.classList.add('is-active');
+        controls.enabled = true;
+        controls.autoRotate = false;
+      });
+
+      document.addEventListener('pointerdown', (e) => {
+        if (compCard && !compCard.contains(e.target)) {
+          shield.classList.remove('is-active');
+          controls.enabled = false;
+          controls.autoRotate = true;
+        }
+      });
+
+      resetViewBtn.addEventListener('click', () => {
+        camera.position.set(2.55, 1.95, 3.25);
+        controls.target.set(0, 0.15, 0);
+        controls.update();
+        controls.autoRotate = true;
+      });
+
+      function easeOutCubic(t) {
+        return 1 - Math.pow(1 - Math.min(1, Math.max(0, t)), 3);
+      }
+
+      function easeInOutCubic(t) {
+        t = Math.min(1, Math.max(0, t));
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      }
+
+      const snapViewport = document.querySelector('.canvas-viewport-wrapper');
+
+      function triggerSnapFeedback() {
+        if (snapViewport) {
+          snapViewport.classList.remove('snap-flash');
+          void snapViewport.offsetWidth;
+          snapViewport.classList.add('snap-flash');
+          setTimeout(() => snapViewport.classList.remove('snap-flash'), 250);
+        }
+        if (navigator.vibrate) {
+          try { navigator.vibrate(12); } catch (e) { }
+        }
+      }
+
+      // 10. Animation Loop
+      function updatePart(part, now, elapsed) {
+        const t = (now - part.t0) / part.dur;
+        if (t >= 0) {
+          const p = part.worn ? easeOutCubic(t) : easeInOutCubic(t);
+          part.y = part.from + (part.to - part.from) * p;
+          if (t >= 1 && !part.done) {
+            part.done = true;
+            if (part.worn) triggerSnapFeedback();
+          }
+        }
+        const w = Math.min(1, Math.max(0, part.y / part.hoverY));
+        const ph = part.phase;
+        part.group.position.y = part.y + Math.sin(elapsed * 2.2 + ph) * 0.025 * w;
+        part.group.rotation.z = Math.sin(elapsed * 1.7 + ph) * 0.025 * w;
+        part.group.rotation.x = (-0.03 + Math.cos(elapsed * 1.6 + ph) * 0.018) * w;
+        return w;
+      }
+
+      const clock = new THREE.Clock();
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        const elapsed = clock.getElapsedTime();
+        const now = performance.now() / 1000;
+
+        const alignerFloat = updatePart(alignerPart, now, elapsed);
+        updatePart(bracesPart, now, elapsed);
+        clearAlignerMat.opacity = 0.52 + 0.12 * alignerFloat;
+
+        controls.update();
+        updatePartLabels();
+        renderer.render(scene, camera);
+      }
+
+      animate();
+
+      window.addEventListener('resize', () => {
+        if (!container) return;
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+
+      // 11. Controller Handlers
+      const btnWearAligner = document.getElementById('btnWearAligner');
+      const btnWearBraces = document.getElementById('btnWearBraces');
+      const btnBareTeeth = document.getElementById('btnBareTeeth');
+      const banner = document.getElementById('stateNarrativeBanner');
+
+      const bannerText = {
+        none: "Current View: Natural teeth. Both appliances float above the arch. Tap one to try it on.",
+        aligner: "Current View: Invisible clear aligner snapped over the arch. Metal braces set aside above.",
+        braces: "Current View: Metal braces bonded to the enamel with a Ni-Ti archwire. Clear aligner set aside above."
+      };
+
+      function selectAppliance(next, btn) {
+        [btnWearAligner, btnWearBraces, btnBareTeeth].forEach(b => {
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+        setAppliance(next);
+        banner.textContent = bannerText[next];
+      }
+
+      btnBareTeeth.addEventListener('click', () => selectAppliance('none', btnBareTeeth));
+      btnWearAligner.addEventListener('click', () => selectAppliance('aligner', btnWearAligner));
+      btnWearBraces.addEventListener('click', () => selectAppliance('braces', btnWearBraces));
+
+      // 12. Auto-Demo
+      const playDemoBtn = document.getElementById('playDemoBtn');
+      let demoTimers = [];
+
+      function stopDemo() {
+        demoTimers.forEach(clearTimeout);
+        demoTimers = [];
+      }
+
+      function runDemo() {
+        stopDemo();
+        const steps = [
+          [btnWearAligner, 0],
+          [btnBareTeeth, 2500],
+          [btnWearBraces, 4100],
+          [btnBareTeeth, 6600]
+        ];
+        steps.forEach(([btn, at]) => {
+          demoTimers.push(setTimeout(() => btn.click(), at));
+        });
+      }
+
+      [btnWearAligner, btnWearBraces, btnBareTeeth].forEach(b => {
+        b.addEventListener('click', (e) => { if (e.isTrusted) stopDemo(); });
+      });
+
+      playDemoBtn.addEventListener('click', () => {
+        stopDemo();
+        btnBareTeeth.click();
+        demoTimers.push(setTimeout(runDemo, 1200));
+      });
+
+      // Auto-demo on first view disabled; use PLAY COMPARISON to start manually.
+
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a3834" name="theme-color"/>
+<title>Microscope Painless Root Canal (RCT) 3D Explorer | Perfect SMILE</title>
+<meta content="Interactive 3D root canal treatment explorer, transparent endodontic pricing tiers, and painless single-sitting therapy by Dr. Prvish Rathee (BDS, MIDA – PGIMS) at Perfect SMILE, Bus Stand Road, Rohtak." name="description"/>
+<link href="https://mintclinicrohtak.com/root-canal.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="Painless Root Canal 3D Explorer | Perfect SMILE" property="og:title"/>
+<meta content="Inspect interactive 3D root canal anatomy, rotary disinfection, and transparent treatment pricing." property="og:description"/>
+<meta content="https://mintclinicrohtak.com/root-canal.html" property="og:url"/>
+<meta content="https://mintclinicrohtak.com/hero-desktop.webp" property="og:image"/>
+<!-- Structured Data -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalProcedure","name":"Microscope-Assisted Rotary Root Canal Treatment","procedureType":"SurgicalProcedure","bodyLocation":"Dental Pulp & Root Canals","howPerformed":"Profound computerized local anesthesia followed by high-magnification access, flexible nickel-titanium rotary file debridement, ultrasonic irrigation, and 3D warm vertical gutta-percha obturation.","performer":{"@context":"https://schema.org","@type":"Dentist","@id":"https://mintclinicrohtak.com/#clinic","name":"Perfect SMILE","url":"https://mintclinicrohtak.com/","image":"https://mintclinicrohtak.com/hero-desktop.webp","telephone":["+919253993999","+919034467399"],"priceRange":"₹₹₹","medicalSpecialty":"Dentistry","address":{"@type":"PostalAddress","streetAddress":"Indira Market, Opposite Radhe Radhe Park, Near Oxygen Hospital, Babra Mohalla","addressLocality":"Rohtak","addressRegion":"Haryana","postalCode":"124001","addressCountry":"IN"},"founder":{"@type":"Person","name":"Dr. Prvish Rathee","jobTitle":"Lead Surgeon","hasCredential":"BDS, MIDA – PGIMS"},"hasMap":"https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac","sameAs":["https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac"],"areaServed":[{"@type":"Place","name":"Babra Mohalla"},{"@type":"Place","name":"Indira Market"},{"@type":"Place","name":"Model Town"},{"@type":"Place","name":"D-Park"},{"@type":"Place","name":"Delhi Road"},{"@type":"Place","name":"PGIMS Complex"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"14:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"16:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"10:00","closes":"12:00","description":"Strictly By Appointment"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","bestRating":"5","reviewCount":76,"ratingCount":76},"employee":[{"@type":"Person","name":"Dr. Prvish Rathee","jobTitle":"Lead Surgeon","hasCredential":"BDS, MIDA – PGIMS"},{"@type":"Person","name":"Dr. Nidhi Sharma","jobTitle":"Associate Surgeon","hasCredential":"BDS, MIDA – PGIMS"}]}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is single-sitting root canal treatment painful?","acceptedAnswer":{"@type":"Answer","text":"No. Under modern computerized local anesthesia and continuous cooling irrigation, rotary RCT is completely painless. Relieving the high-pressure infected nerve brings immediate pain relief."}},{"@type":"Question","name":"Can an infected tooth always be treated in a single sitting?","acceptedAnswer":{"@type":"Answer","text":"Over 85% of cases are completed in a single 45-minute sitting. Only teeth with acute active swelling or weeping periapical exudate require a secondary sitting with calcium hydroxide medication."}},{"@type":"Question","name":"Why is a dental crown mandatory after a root canal?","acceptedAnswer":{"@type":"Answer","text":"Removing the infected nerve removes blood circulation, making tooth enamel brittle. A monolithic zirconia crown protects the tooth from cracking under normal chewing force."}},{"@type":"Question","name":"What is the expected lifespan of an RCT-treated tooth?","acceptedAnswer":{"@type":"Answer","text":"With an airtight 3D root seal and a well-fitted CAD/CAM zirconia crown, a root canal-treated tooth routinely lasts 15 to 25+ years."}}]}]}</script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-canvas: #faf8f4;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f4ede2;
+
+      --text-main: #14211e;
+      --text-muted: #53645e;
+
+      --teal-primary: #0a3834;
+      --teal-hover: #062623;
+      --teal-soft: #f0f7f5;
+      --teal-border: #b8ded7;
+
+      --emerald-accent: #047857;
+      --emerald-soft: #ecfdf5;
+
+      --gold-primary: #b5893b;
+      --gold-accent: #8e651e;
+      --gold-soft: #fcf8f0;
+      --gold-border: #ebd9b5;
+
+      --border-color: #ebe4d8;
+      --shadow-sm: 0 1px 3px rgba(10, 56, 52, 0.04);
+      --shadow-card: 0 4px 18px -2px rgba(10, 56, 52, 0.06);
+      --shadow-desk: 0 18px 45px -8px rgba(10, 56, 52, 0.16);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      background-color: var(--bg-canvas);
+    }
+
+    body {
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 96px;
+    }
+
+    @media (min-width: 900px) and (orientation: landscape) {
+      body { padding-bottom: 0; }
+    }
+
+    .fluid-section-band {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 clamp(16px, 3.5vw, 44px);
+    }
+
+    .serif-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.01em;
+    }
+
+    /* 1. SEAMLESS EDITORIAL HEADER */
+    .site-nav-header {
+      width: 100%;
+      padding-top: clamp(14px, 2.5vw, 22px);
+      padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: transparent;
+      border: none !important;
+    }
+
+    .header-brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .gold-tooth-icon {
+      width: clamp(32px, 3.2vw, 38px);
+      height: clamp(32px, 3.2vw, 38px);
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px rgba(181, 137, 59, 0.28));
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-name-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.15rem, 3.2vw, 1.55rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--teal-primary);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-tagline-sans {
+      font-size: clamp(0.48rem, 1.3vw, 0.60rem);
+      color: var(--teal-primary);
+      opacity: 0.88;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .back-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal-primary);
+      text-decoration: none;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: #ffffff;
+      padding: 9px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .back-nav-btn:hover {
+      background: var(--teal-primary);
+      color: #ffffff;
+      border-color: var(--teal-primary);
+    }
+
+    /* 2. COMPACT HERO HEADER */
+    .compact-hero-block {
+      margin-top: 12px;
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .eyebrow-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill-tag {
+      display: inline-block;
+      background: var(--gold-soft);
+      color: var(--gold-accent);
+      border: 1px solid var(--gold-border);
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .specialist-badge-top {
+      font-size: 0.70rem;
+      font-weight: 800;
+      color: var(--emerald-accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .compact-hero-block h1 {
+      font-size: clamp(2.1rem, 5.2vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.10;
+      color: var(--teal-primary);
+    }
+
+    /* 3. ZERO-BOX FLOATING 3D SHOWROOM */
+    .anatomy-floating-stage {
+      width: 100%;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 12px 0 38px;
+      position: relative;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 680px) {
+      .steps {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+
+    .step {
+      appearance: none;
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 12px 10px;
+      text-align: center;
+      font-family: inherit;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      color: var(--text-main);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      line-height: 1.2;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step span {
+      font-size: 0.62rem;
+      font-weight: 600;
+      text-transform: none;
+      color: var(--text-muted);
+    }
+
+    .step:hover:not(:disabled) {
+      border-color: var(--teal-primary);
+      background: var(--teal-soft);
+    }
+
+    .step.active {
+      background: var(--teal-primary);
+      border-color: var(--teal-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(10, 56, 52, 0.20);
+    }
+
+    .step.active span {
+      color: #d8eee9;
+    }
+
+    .step.locked, .step:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      background: #faf6ef;
+      color: var(--text-main);
+    }
+
+    .viewer {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 58% 62% at 50% 46%,
+          rgba(54, 78, 75, 0.42) 0%,
+          rgba(31, 48, 46, 0.24) 48%,
+          rgba(12, 24, 23, 0.08) 76%,
+          rgba(7, 15, 15, 0) 100%),
+        linear-gradient(145deg, #172725 0%, #0d1a19 52%, #081110 100%) !important;
+      border: 1px solid rgba(184, 222, 215, 0.16) !important;
+      box-shadow:
+        inset 0 0 70px rgba(0, 0, 0, 0.24),
+        0 12px 32px rgba(4, 16, 15, 0.14) !important;
+    }
+
+    @media (min-width: 900px) {
+      .viewer {
+        height: 370px;
+      }
+    }
+
+    #scene {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+      z-index: 2;
+      touch-action: pan-y !important;
+      background: transparent;
+    }
+
+    .viewer-label {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      z-index: 2;
+      color: #e9f4f1;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(7, 25, 23, 0.82);
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(184, 222, 215, 0.20);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(10, 56, 52, 0.05);
+      pointer-events: none;
+    }
+
+    .viewer-hint {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #e9f4f1;
+      background: rgba(7, 25, 23, 0.86);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 11px;
+      white-space: nowrap;
+      border: 1px solid rgba(184, 222, 215, 0.20);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+      pointer-events: none;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .viewer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 48%, rgba(255,255,255,0.035), transparent 55%),
+        linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.16));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .viewer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 55%, rgba(181, 137, 59, 0.18), transparent 62%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .viewer.snap-flash::after {
+      opacity: 1;
+    }
+
+    .interaction-shield {
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 30px;
+      gap: 8px;
+      z-index: 10;
+      cursor: pointer;
+      transition: opacity 0.25s ease;
+    }
+
+    .interaction-shield.is-active {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .shield-badge {
+      background: #ffffff;
+      color: var(--teal-primary);
+      border: 1.5px solid var(--gold-border);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 9px 22px;
+      border-radius: 999px;
+      box-shadow: 0 4px 18px rgba(10, 56, 52, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .shield-subtext {
+      font-size: 0.70rem;
+      color: var(--teal-primary);
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    .part-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -140%);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #e3d5b8;
+      color: #0a3834;
+      font-size: 0.60rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 6;
+      box-shadow: 0 3px 12px rgba(10, 56, 52, 0.14);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .part-label::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 5px;
+      height: 5px;
+      margin: 3px 0 0 -2.5px;
+      border-radius: 50%;
+      background: #0a3834;
+    }
+
+    .viewer-tools {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-top: 14px;
+      padding: 0 4px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool {
+      background: #ffffff;
+      border: 1.2px solid var(--border-color);
+      color: var(--teal-primary);
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 7px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tool:hover {
+      background: var(--teal-soft);
+      border-color: var(--teal-primary);
+    }
+
+    .tool.tool-primary {
+      background: var(--teal-primary);
+      border-color: var(--teal-primary);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(10, 56, 52, 0.18);
+    }
+
+    .tool.tool-primary:hover {
+      background: var(--teal-hover);
+      border-color: var(--teal-hover);
+      color: #ffffff;
+    }
+
+    .state-narrative-banner {
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      font-size: 0.82rem;
+      color: var(--text-main);
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.45;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .state-narrative-banner strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--gold-accent);
+    }
+
+    .editorial-heading-group {
+      margin: 44px 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .editorial-subhead {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-accent);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .section-display-title {
+      font-size: clamp(1.75rem, 3.6vw, 2.4rem);
+      font-weight: 700;
+      color: var(--teal-primary);
+      line-height: 1.2;
+    }
+
+    /* 4. SEAMLESS PRICING TIERS */
+    .pricing-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 12px;
+      margin-bottom: 36px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-cards-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    .price-tier-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px 22px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .price-tier-card.featured {
+      background: var(--teal-soft);
+      border: 1.5px solid var(--teal-border);
+      color: var(--text-main);
+      box-shadow: 0 8px 24px -4px rgba(10, 56, 52, 0.10);
+    }
+
+    .price-tier-card.featured .price-tier-title {
+      color: var(--teal-primary);
+    }
+
+    .price-tier-card.featured .price-tier-figure {
+      color: var(--emerald-accent);
+    }
+
+    .price-tier-card.featured .price-tier-includes {
+      color: var(--text-muted);
+    }
+
+    .price-tier-card.featured::before {
+      content: 'MOST COMMON';
+      position: absolute;
+      top: -10px;
+      left: 18px;
+      background: var(--gold-primary);
+      color: #ffffff;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .price-tier-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal-primary);
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .price-tier-figure {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--emerald-accent);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .price-tier-includes {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.48;
+      font-weight: 500;
+    }
+
+    /* 5. SEAMLESS COMPARISON TABLE */
+    .comp-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 14px 0 38px 0;
+      background: transparent;
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      min-width: 580px;
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comp-table th, .comp-table td {
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .comp-table th {
+      background: var(--bg-subtle);
+      font-weight: 800;
+      color: var(--teal-primary);
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+    }
+
+    .comp-table td strong { color: var(--teal-primary); }
+
+    /* 6. DOCTOR PROFILE */
+    .doctor-feature-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-top: 14px;
+      margin-bottom: 38px;
+      width: 100%;
+    }
+
+    .doctor-photo-frame {
+      position: relative;
+      width: 110px;
+      height: 132px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(10, 56, 52, 0.1);
+    }
+
+    .doctor-monogram {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #f5e0a3;
+      background: linear-gradient(135deg, #0a3834 0%, #155048 60%, #0a3834 100%);
+    }
+
+    .doctor-photo-badge {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(10, 56, 52, 0.9);
+      color: #ffffff;
+      font-size: 0.46rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 4px;
+      text-align: center;
+    }
+
+    .doctor-details-block {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .doc-lead-eyebrow {
+      font-size: 0.66rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .doc-name-serif {
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--teal-primary);
+    }
+
+    .doc-degrees-line {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-top: 3px;
+    }
+
+    .doc-reg-number {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--emerald-accent);
+      margin-top: 1px;
+    }
+
+    .doc-institution-line {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.48;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    /* 7. FAQ ACCORDION */
+    .faq-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+      margin-bottom: 28px;
+      width: 100%;
+    }
+
+    details {
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: border-color 0.15s ease;
+    }
+
+    details[open] { border-color: var(--teal-border); }
+
+    summary {
+      padding: 16px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--teal-primary);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.15rem;
+      color: var(--gold-accent);
+      font-weight: 800;
+    }
+    details[open] summary::after { content: '−'; }
+
+    details p {
+      padding: 0 18px 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .site-footer {
+      margin-top: 56px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      width: 100%;
+    }
+
+    /* 8. MOBILE FLOATING ACTION BAR */
+    .mobile-action-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(250, 248, 244, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-color);
+      padding: 12px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+      box-shadow: 0 -4px 12px rgba(10, 56, 52, 0.05);
+    }
+
+    @media (min-width: 900px) and (orientation: landscape) {
+      .mobile-action-bar { display: none; }
+    }
+
+    .mobile-call-btn, .mobile-book-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      padding: 13px 0;
+      font-weight: 700;
+    }
+
+    .mobile-call-btn {
+      flex: 1;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-color);
+      color: var(--text-main);
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+
+    .mobile-book-btn {
+      flex: 2;
+      background: var(--teal-primary);
+      color: #ffffff;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      border: none;
+      box-shadow: 0 4px 12px rgba(10, 56, 52, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      .site-nav-header { gap: 8px; }
+      .header-brand-link { gap: 8px; flex: 1 1 auto; min-width: 0; }
+      .brand-text-block { min-width: 0; }
+      .brand-name-serif {
+        font-size: clamp(0.98rem, 4.1vw, 1.25rem);
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: clip;
+        letter-spacing: 0.02em;
+      }
+      .brand-tagline-sans {
+        font-size: clamp(0.40rem, 1.45vw, 0.52rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .back-nav-btn {
+        flex: 0 0 auto;
+        padding: 8px 9px;
+        font-size: 0.64rem;
+        letter-spacing: 0.025em;
+        gap: 4px;
+      }
+    }
+
+    .site-footer-inner { max-width: 760px; margin: 0 auto; }
+    .footer-brand { color: var(--teal-primary); letter-spacing: 0.04em; font-size: 0.95rem; margin-bottom: 10px; }
+    .footer-address, .footer-contact { margin: 6px 0; line-height: 1.65; }
+    .footer-contact a, .footer-nav a { color: var(--teal-primary); text-decoration: none; font-weight: 600; }
+    .footer-contact a:hover, .footer-nav a:hover { text-decoration: underline; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 6px 20px; justify-content: center; margin: 14px 0 6px; font-size: 0.82rem; }
+    .footer-legal { margin-top: 10px; font-size: 0.72rem; opacity: 0.85; }
+  </style>
+<style id="header-back-button-fix">
+    .site-nav-header {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 10px !important;
+      min-width: 0 !important;
+    }
+    .header-brand-link {
+      min-width: 0 !important;
+      flex: 1 1 auto !important;
+    }
+    .back-nav-btn {
+      flex: 0 0 auto !important;
+      white-space: nowrap !important;
+      max-width: fit-content !important;
+    }
+    @media (max-width:600px) {
+      .site-nav-header { gap: 6px !important; }
+      .header-brand-link { gap: 6px !important; }
+      .gold-tooth-icon { width: 30px !important; height: 30px !important; }
+      .brand-name-serif { font-size: 0.92rem !important; letter-spacing: 0.01em !important; }
+      .brand-tagline-sans { font-size: 0.40rem !important; letter-spacing: 0.06em !important; }
+      .back-nav-btn { padding: 7px 8px !important; font-size: 0.58rem !important; letter-spacing: 0.01em !important; gap: 3px !important; }
+    }
+  </style>
+<style id="mobile-3d-performance">
+    .viewer, #scene { contain: layout paint style; }
+    .viewer canvas { touch-action: pan-y; }
+  </style>
+<link href="site.css" rel="stylesheet"/>
+<script defer="" src="site.js"></script>
+</head>
+<body>
+<!-- 1. FULL-BLEED SEAMLESS HEADER (SMART BACK NAVIGATION) -->
+<header class="site-nav-header fluid-section-band">
+<a aria-label="Perfect SMILE Home" class="header-brand-link" href="index.html">
+<svg aria-hidden="true" class="gold-tooth-icon" fill="none" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="apexGoldShine" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#f5e0a3"></stop>
+<stop offset="40%" stop-color="#b5893b"></stop>
+<stop offset="80%" stop-color="#8a611c"></stop>
+<stop offset="100%" stop-color="#d6ab58"></stop>
+</lineargradient>
+</defs>
+<path d="M10 4C6.5 4 4 6.8 4 10.8c0 5.2 2.6 11 4.7 16.6.7 2 2.8 2.6 4.1 1.3 1.6-1.6 2.4-4 3.2-6.7.8 2.7 1.6 5.1 3.2 6.7 1.3 1.3 3.4.7 4.1-1.3C25.4 21.8 28 16 28 10.8 28 6.8 25.5 4 22 4c-3.1 0-5 2-6 2s-2.9-2-6-2z" fill="url(#apexGoldShine)" stroke="#8a611c" stroke-width="0.8"></path>
+<path d="M19 8 L20 6 L21 8 L23 9 L21 10 L20 12 L19 10 L17 9 Z" fill="#ffffff"></path>
+</svg>
+<div class="brand-text-block">
+<span class="brand-name-serif">Perfect SMILE</span>
+<span class="brand-tagline-sans">Bus Stand Road · Rohtak</span>
+</div>
+</a>
+<!-- Smart Back Button: Returns directly to #treatments -->
+<a aria-label="Back to Treatments &amp; Cost" class="back-nav-btn" href="index.html#treatments" onclick="if(window.history.length &gt; 1 &amp;&amp; document.referrer.includes(window.location.host)){ window.history.back(); return false; }">
+<span>← Treatments &amp; Cost</span>
+</a>
+</header>
+<!-- WIDESCREEN FLUID CONTENT BAND -->
+<main class="fluid-section-band">
+<!-- 2. COMPACT HERO -->
+<section aria-label="Root Canal Header" class="compact-hero-block">
+<div class="eyebrow-badge-row">
+<span class="pill-tag">Endodontic Pain Relief</span>
+<span class="specialist-badge-top">Dr. Prvish Rathee</span>
+</div>
+<h1 class="serif-title">Microscope Painless Root Canal (RCT)</h1>
+</section>
+<!-- 3. ZERO-BOX FLOATING 3D SHOWROOM SECTION -->
+<section aria-label="Interactive 3D Root Canal Simulator" class="anatomy-floating-stage" id="anatomyCard">
+<!-- 4-Stage Progression Deck -->
+<div class="steps" role="tablist">
+<button aria-selected="true" class="step active" data-stage="1" role="tab">
+<strong>1. NERVE INFECTION</strong>
+<span>Decay &amp; pulpitis</span>
+</button>
+<button aria-selected="false" class="step" data-stage="2" role="tab">
+<strong>2. ROTARY SHAPING</strong>
+<span>Ni-Ti canal clearing</span>
+</button>
+<button aria-selected="false" class="step" data-stage="3" role="tab">
+<strong>3. HERMETIC SEAL</strong>
+<span>3D Gutta-percha fill</span>
+</button>
+<button aria-selected="false" class="step" data-stage="4" role="tab">
+<strong>4. SEAT CROWN</strong>
+<span>Full bite restoration</span>
+</button>
+</div>
+<div class="viewer">
+<div class="viewer-label">LIVE 3D CLINICAL ENDODONTICS</div>
+<canvas id="scene"></canvas>
+<!-- Interactive Mobile Shield (Stops Scroll-Trapping) -->
+<div class="interaction-shield" id="interactionShield">
+<div class="shield-badge">
+<span>✦ Tap to Rotate 3D Model ✦</span>
+</div>
+<span class="shield-subtext">Touch and drag freely once unlocked</span>
+</div>
+<div class="viewer-hint">↔ Drag to rotate · Pinch / wheel to zoom</div>
+</div>
+<div class="viewer-tools">
+<span>Interactive anatomical root canal explorer</span>
+<div class="tool-row">
+<button class="tool tool-primary" id="playBuild">▶ PLAY FULL BUILD</button>
+<button class="tool" id="explode">EXPLODE LAYERS</button>
+<button class="tool" id="reset">RESET VIEW</button>
+</div>
+</div>
+<!-- Dynamic Surgical State Narrative Banner -->
+<div class="state-narrative-banner">
+<strong id="stageTitle">1. Bacterial Decay &amp; Nerve Infection</strong>
+<span id="stageText">Decay breaches the protective enamel and dentin layers, infecting the vascular dental pulp and creating severe throbbing periapical pressure.</span>
+</div>
+</section>
+<!-- 4. TRANSPARENT PRICING TIERS (MATCHING INDEX_2.HTML) -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Clinical Pricing</span>
+<h2 class="section-display-title serif-title">Transparent Procedural Estimates</h2>
+</div>
+</div>
+<section aria-label="Root Canal Pricing Breakdown" class="pricing-cards-grid">
+<div class="price-tier-card">
+<div>
+<h3 class="price-tier-title">Single Sitting Rotary RCT</h3>
+<div class="price-tier-figure">₹3,500 – ₹5,500</div>
+</div>
+<p class="price-tier-includes">
+          Painless computerized rotary canal clearing, ultrasonic irrigation, and immediate same-day bio-ceramic root sealing. Chair time: 45 minutes.
+         · Emergency Reception: <a href="tel:+919254441687">+91 92544 41687</a></p>
+</div>
+<div class="price-tier-card featured">
+<div>
+<h3 class="price-tier-title">Re-RCT / Failed Canal Retreat</h3>
+<div class="price-tier-figure">₹5,000 – ₹7,500</div>
+</div>
+<p class="price-tier-includes">
+          Microscopic breakdown and removal of old infected root fillings, ultrasonic negotiation of curved canals, and apical mineral trioxide aggregate (MTA) barrier seal.
+        </p>
+</div>
+<div class="price-tier-card">
+<div>
+<h3 class="price-tier-title">Pediatric / Milk Tooth RCT</h3>
+<div class="price-tier-figure">₹2,000 – ₹3,500</div>
+</div>
+<p class="price-tier-includes">
+          Gentle pulpectomy with bio-resorbable root canal paste designed specifically to safeguard underlying permanent adult tooth buds.
+        </p>
+</div>
+</section>
+<!-- 5. CLINICAL COMPARISON TABLE: ROTARY VS HAND FILING -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Clinical Decision</span>
+<h2 class="section-display-title serif-title">Rotary Microscopic RCT vs. Hand Filing</h2>
+</div>
+</div>
+<section aria-label="Comparison Table" class="comp-table-wrap">
+<table class="comp-table">
+<thead>
+<tr>
+<th>Treatment Feature</th>
+<th>Microscope Rotary RCT (Perfect SMILE)</th>
+<th>Conventional Hand-Filing (Old Method)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pain &amp; Patient Comfort</strong></td>
+<td><strong>Painless</strong> (Computerized local anesthesia &amp; vibration-free rotary files)</td>
+<td><strong>High Discomfort</strong> (Manual scraping pressure &amp; multi-day soreness)</td>
+</tr>
+<tr>
+<td><strong>Appointment Duration</strong></td>
+<td><strong>Single 45-Min Visit</strong> (Disinfection &amp; sealing completed in 1 session)</td>
+<td><strong>3 to 4 Painful Visits</strong> (Repeated temporary dressings prone to leakage)</td>
+</tr>
+<tr>
+<td><strong>Curved Canal Safety</strong></td>
+<td><strong>Zero Ledge Risk</strong> (Flexible Ni-Ti files glide safely through natural root curves)</td>
+<td><strong>Instrument Breakage Risk</strong> (Rigid stainless steel files can snap or perforate)</td>
+</tr>
+<tr>
+<td><strong>3D Hermetic Apex Seal</strong></td>
+<td><strong>100% Bacterial Block</strong> (Thermoplastic gutta-percha flows into side canals)</td>
+<td><strong>Incomplete Seal</strong> (Cold manual points leave hollow voids for bacteria)</td>
+</tr>
+<tr>
+<td><strong>10-Year Tooth Retention</strong></td>
+<td><strong>96%+ Success</strong> (Preserves natural root foundation for decades)</td>
+<td><strong>Frequent Failure</strong> (Higher reinfection rate requiring tooth extraction)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- 6. SEAMLESS DOCTOR EDITORIAL PROFILE -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Supervising Specialist</span>
+<h2 class="section-display-title serif-title">Clinical Leadership</h2>
+</div>
+</div>
+<div aria-label="Supervising Doctor Profile" class="doctor-feature-entry">
+<div class="doctor-photo-frame">
+<div aria-label="PR logo" class="doctor-monogram">PR</div>
+<div class="doctor-photo-badge">DR. PRVISH RATHEE</div>
+</div>
+<div class="doctor-details-block">
+<span class="doc-lead-eyebrow">Lead Dental Surgeon</span>
+<h3 class="doc-name-serif serif-title">Dr. Prvish Rathee</h3>
+<p class="doc-degrees-line">BDS, MIDA – PGIMS</p>
+<p class="doc-reg-number">Lead Dental Surgeon</p>
+<p class="doc-institution-line">Dr. Prvish Rathee is a Dental Surgeon focusing on preventative, implant, and restorative care.</p>
+</div>
+</div>
+<!-- 7. FREQUENTLY ASKED QUESTIONS -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Patient Inquiries</span>
+<h2 class="section-display-title serif-title">Frequently Asked Questions</h2>
+</div>
+</div>
+<section aria-label="Patient Questions" class="faq-accordion">
+<details>
+<summary>Is the root canal procedure painful?</summary>
+<p>
+          No. The procedure is performed under computerized local anesthesia. Patients feel zero pain during canal debridement. In fact, opening the canal relieves the severe throbbing pressure caused by infected pulp tissue.
+        </p>
+</details>
+<details>
+<summary>Can I complete my root canal in a single visit?</summary>
+<p>
+          Yes. Over 85% of cases are completed in a single 45-minute sitting using flexible rotary instruments. Only teeth with severe swelling or active pus drainage require a second sitting.
+        </p>
+</details>
+<details>
+<summary>Is a crown always necessary after a root canal?</summary>
+<p>
+          Yes. Once the tooth pulp is removed, the remaining enamel becomes brittle without internal hydration. Placing a monolithic zirconia crown restores chewing strength and prevents the tooth from cracking in half.
+        </p>
+</details>
+<details>
+<summary>Why did my previous root canal at another clinic fail?</summary>
+<p>
+          Canals can fail if complex curved root anatomy or hidden extra canals (such as the MB2 canal in molars) are missed with manual hand tools. Our high-magnification surgical lighting and rotary protocol ensure every canal is cleared and sealed.
+        </p>
+</details>
+</section>
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p class="footer-brand serif-title">Perfect SMILE · DR. PRVISH RATHEE</p>
+<p class="footer-address">Indira Market, Opposite Radhe Radhe Park, Near Oxygen Hospital, Babra Mohalla, Rohtak, Haryana 124001</p>
+<p class="footer-contact">Direct Reception: <a href="tel:+919253993999">+91 92539 93999</a> · Hours: Monday to Saturday: 9:30 AM – 2:00 PM | 4:00 PM – 6:30 PM (Sunday: 10:00 AM – 12:00 PM By Appointment)</p>
+<nav aria-label="Footer SEO navigation" class="footer-nav"><a href="index.html">Home</a><a href="implants.html">Dental Implants 3D</a><a href="aligners.html">Clear Aligners 3D</a><a href="root-canal.html">Root Canal Treatment</a><a href="crowns.html">Dental Crowns</a><a href="veneers.html">Smile Makeover and Porcelain Veneers</a><a href="checkup.html">Dental Check-up and Teeth Cleaning</a><a href="dentist-near-model-town-rohtak.html">Dentist near Model Town, Rohtak</a><a href="dentist-near-d-park-rohtak.html">Dentist near D-Park</a><a href="dentist-near-delhi-road-rohtak.html">Dentist near Delhi Road</a><a href="dentist-near-pgims-rohtak.html">Dentist near PGIMS</a><a href="dentist-near-babra-mohalla-rohtak.html">Dentist near Babra Mohalla</a><a href="dentist-near-indira-market-rohtak.html">Dentist near Indira Market</a></nav>
+<p class="footer-legal">© 2026 Perfect SMILE. All restorative procedures performed by registered dental surgeons.</p>
+</div>
+</footer>
+</main>
+<!-- 8. MOBILE FLOATING ACTION BAR -->
+<div class="mobile-action-bar">
+<a class="mobile-call-btn" href="tel:+919253993999">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+<span>Call</span>
+</a>
+<a class="mobile-call-btn" href="https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac" rel="noopener" target="_blank">
+<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+</svg>
+<span>Directions</span>
+</a>
+<a class="mobile-book-btn" href="https://wa.me/919034467399?text=Hello%20Dr.%20Neha%20Chhikara%2C%20I%20reviewed%20the%203D%20Root%20Canal%20guide%20on%20your%20website%20and%20would%20like%20to%20schedule%20an%20urgent%20consultation." rel="noopener" target="_blank">
+<svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17">
+<path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path>
+</svg>
+<span>Book on WhatsApp</span>
+</a>
+</div>
+<!-- ==========================================================
+       THREE.JS STUDIO ENGINE (PRECISE LIGHTING & ANATOMY)
+  =========================================================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+  (() => {
+    const canvas = document.getElementById('scene');
+    const viewer = canvas.parentElement;
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: true,
+      alpha: true,
+      powerPreference: 'high-performance'
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.0;
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
+    camera.position.set(4.6, 2.1, 6.5);
+
+    const controls = new THREE.OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.065;
+    controls.enablePan = false;
+    controls.minDistance = 3.8;
+    controls.maxDistance = 9.5;
+    controls.target.set(0, -0.1, 0);
+    controls.enabled = false;
+
+    // Controlled clinical lighting: darker environment, bright readable subject.
+    scene.add(new THREE.HemisphereLight(0xd8ebe8, 0x071211, 0.72));
+    const key = new THREE.DirectionalLight(0xfff8e9, 1.95);
+    key.position.set(4, 7, 6);
+    key.castShadow = true;
+    key.shadow.mapSize.set(1024, 1024);
+    key.shadow.bias = -0.0015;
+    scene.add(key);
+
+    const fill = new THREE.DirectionalLight(0x9ed8d0, 0.58);
+    fill.position.set(-5, 3, 4);
+    scene.add(fill);
+
+    const rim = new THREE.DirectionalLight(0xffd98f, 1.05);
+    rim.position.set(0, 4, -6);
+    scene.add(rim);
+
+    // Procedural Reflection Environment
+    function buildStudioEnvironment() {
+      const size = 256;
+      const c = document.createElement('canvas');
+      c.width = c.height = size;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createLinearGradient(0, 0, 0, size);
+      grad.addColorStop(0, '#314744');
+      grad.addColorStop(0.45, '#182a28');
+      grad.addColorStop(1, '#081312');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, size, size);
+      const tex = new THREE.CanvasTexture(c);
+      tex.mapping = THREE.EquirectangularReflectionMapping;
+      tex.encoding = THREE.sRGBEncoding;
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      pmrem.compileEquirectangularShader();
+      const envMap = pmrem.fromEquirectangular(tex).texture;
+      tex.dispose();
+      pmrem.dispose();
+      return envMap;
+    }
+    try { scene.environment = buildStudioEnvironment(); } catch (e) {}
+
+    // ---------- Cutaway: front half of tooth clipped away ----------
+    renderer.localClippingEnabled = true;
+    const cutPlane = new THREE.Plane(new THREE.Vector3(0, 0, -1), 0);
+
+    // Materials
+    const clinicalGum = new THREE.MeshPhysicalMaterial({
+      color: 0xd9687e, roughness: 0.44, metalness: 0, clearcoat: 0.28, envMapIntensity: 0.5,
+      side: THREE.DoubleSide
+    });
+    const boneMat = new THREE.MeshStandardMaterial({
+      color: 0xc9b99b, roughness: 0.7, envMapIntensity: 0.35
+    });
+    const toothEnamelMat = new THREE.MeshPhysicalMaterial({
+      color: 0xf9f5ea, roughness: 0.14, metalness: 0.02, clearcoat: 0.95, clearcoatRoughness: 0.08,
+      envMapIntensity: 0.72, side: THREE.DoubleSide, clippingPlanes: [cutPlane]
+    });
+    const dentinMat = new THREE.MeshStandardMaterial({
+      color: 0xe5d3b0, roughness: 0.52, envMapIntensity: 0.22
+    });
+    const infectedPulpMat = new THREE.MeshStandardMaterial({
+      color: 0xf01f4f, emissive: 0x8f1237, emissiveIntensity: 0.62, roughness: 0.30,
+      transparent: true, opacity: 1
+    });
+    const rotaryFileMat = new THREE.MeshStandardMaterial({
+      color: 0xc9e0ee, metalness: 0.96, roughness: 0.13, envMapIntensity: 0.92
+    });
+    const fileHandleMat = new THREE.MeshStandardMaterial({
+      color: 0x0284c7, roughness: 0.4, metalness: 0.3
+    });
+    const guttaPerchaMat = new THREE.MeshStandardMaterial({
+      color: 0xffa24a, emissive: 0xb94f0a, emissiveIntensity: 0.22, roughness: 0.34
+    });
+    const zirconiaCrownMat = new THREE.MeshPhysicalMaterial({
+      color: 0xffffff, roughness: 0.08, metalness: 0.06, clearcoat: 1.0,
+      clearcoatRoughness: 0.05, envMapIntensity: 1.0, side: THREE.DoubleSide
+    });
+
+    // Smooth extruded-profile helper (implants-page technique)
+    function extrudeCentered(shape, depth, bevel) {
+      const geo = new THREE.ExtrudeGeometry(shape, {
+        depth: depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel * 0.9,
+        bevelSegments: 4, steps: 1, curveSegments: 24
+      });
+      geo.computeBoundingBox();
+      const bb = geo.boundingBox;
+      geo.translate(0, 0, -(bb.min.z + bb.max.z) / 2);
+      return geo;
+    }
+
+    // Tooth Hierarchy
+    const anatomy = new THREE.Group();
+    anatomy.position.y = -0.04;
+    scene.add(anatomy);
+
+    const toothBaseGroup = new THREE.Group();
+    const pulpGroup = new THREE.Group();
+    const fileGroup = new THREE.Group();
+    const guttaGroup = new THREE.Group();
+    const crownGroup = new THREE.Group();
+    anatomy.add(toothBaseGroup, pulpGroup, fileGroup, guttaGroup, crownGroup);
+
+    // Contact Ground Shadow
+    const shadowCanvas = document.createElement('canvas');
+    shadowCanvas.width = shadowCanvas.height = 128;
+    const sCtx = shadowCanvas.getContext('2d');
+    const sGrad = sCtx.createRadialGradient(64, 64, 0, 64, 64, 60);
+    sGrad.addColorStop(0, 'rgba(20, 35, 32, 0.26)');
+    sGrad.addColorStop(0.4, 'rgba(20, 35, 32, 0.10)');
+    sGrad.addColorStop(1, 'rgba(20, 35, 32, 0)');
+    sCtx.fillStyle = sGrad;
+    sCtx.fillRect(0, 0, 128, 128);
+    const shadowTexture = new THREE.CanvasTexture(shadowCanvas);
+    const shadowPlane = new THREE.Mesh(
+      new THREE.PlaneGeometry(6.5, 3.5),
+      new THREE.MeshBasicMaterial({ map: shadowTexture, transparent: true, depthWrite: false })
+    );
+    shadowPlane.rotation.x = -Math.PI / 2;
+    shadowPlane.position.set(0, -1.85, 0);
+    anatomy.add(shadowPlane);
+
+    // Anatomical molar: crown + two curved tapered roots, one smooth profile
+    const toothShape = new THREE.Shape();
+    toothShape.moveTo(0, 1.16);
+    toothShape.quadraticCurveTo(0.28, 1.24, 0.52, 1.12);
+    toothShape.quadraticCurveTo(0.80, 1.02, 0.84, 0.72);
+    toothShape.quadraticCurveTo(0.86, 0.52, 0.78, 0.38);
+    toothShape.quadraticCurveTo(0.70, 0.05, 0.60, -0.35);
+    toothShape.quadraticCurveTo(0.52, -0.80, 0.40, -1.12);
+    toothShape.quadraticCurveTo(0.34, -1.30, 0.26, -1.32);
+    toothShape.quadraticCurveTo(0.22, -1.05, 0.20, -0.70);
+    toothShape.quadraticCurveTo(0.18, -0.35, 0.12, -0.12);
+    toothShape.quadraticCurveTo(0.06, -0.02, 0, -0.04);
+    toothShape.quadraticCurveTo(-0.06, -0.02, -0.12, -0.12);
+    toothShape.quadraticCurveTo(-0.18, -0.35, -0.20, -0.70);
+    toothShape.quadraticCurveTo(-0.22, -1.05, -0.26, -1.32);
+    toothShape.quadraticCurveTo(-0.34, -1.30, -0.40, -1.12);
+    toothShape.quadraticCurveTo(-0.52, -0.80, -0.60, -0.35);
+    toothShape.quadraticCurveTo(-0.70, 0.05, -0.78, 0.38);
+    toothShape.quadraticCurveTo(-0.86, 0.52, -0.84, 0.72);
+    toothShape.quadraticCurveTo(-0.80, 1.02, -0.52, 1.12);
+    toothShape.quadraticCurveTo(-0.28, 1.24, 0, 1.16);
+
+    const toothMesh = new THREE.Mesh(extrudeCentered(toothShape, 0.8, 0.07), toothEnamelMat);
+    toothBaseGroup.add(toothMesh);
+
+    // Solid dentin cut-face (textbook cutaway look)
+    const dentinFace = new THREE.Mesh(new THREE.ShapeGeometry(toothShape, 24), dentinMat);
+    dentinFace.scale.set(0.98, 0.98, 1);
+    dentinFace.position.z = 0.002;
+    toothBaseGroup.add(dentinFace);
+
+    // Organic gum collar hugging the tooth neck (sits behind the cut plane)
+    const gumShape = new THREE.Shape();
+    gumShape.moveTo(-1.45, -0.62);
+    gumShape.lineTo(-1.45, 0.08);
+    gumShape.quadraticCurveTo(-1.40, 0.36, -1.05, 0.42);
+    gumShape.quadraticCurveTo(-0.88, 0.45, -0.80, 0.28);
+    gumShape.lineTo(-0.78, -0.10);
+    gumShape.lineTo(0.78, -0.10);
+    gumShape.lineTo(0.80, 0.28);
+    gumShape.quadraticCurveTo(0.88, 0.45, 1.05, 0.42);
+    gumShape.quadraticCurveTo(1.40, 0.36, 1.45, 0.08);
+    gumShape.lineTo(1.45, -0.62);
+    gumShape.quadraticCurveTo(0.7, -0.80, 0, -0.78);
+    gumShape.quadraticCurveTo(-0.7, -0.80, -1.45, -0.62);
+    const gumMesh = new THREE.Mesh(extrudeCentered(gumShape, 0.5, 0.05), clinicalGum);
+    gumMesh.position.z = -0.55;
+    toothBaseGroup.add(gumMesh);
+
+    // Low rounded jawbone ridge behind the roots
+    const jawShape = new THREE.Shape();
+    jawShape.moveTo(-1.55, -1.55);
+    jawShape.lineTo(-1.55, -0.80);
+    jawShape.quadraticCurveTo(-1.0, -0.60, -0.4, -0.66);
+    jawShape.quadraticCurveTo(0.2, -0.70, 0.8, -0.62);
+    jawShape.quadraticCurveTo(1.2, -0.58, 1.55, -0.80);
+    jawShape.lineTo(1.55, -1.55);
+    jawShape.quadraticCurveTo(0.6, -1.75, 0, -1.73);
+    jawShape.quadraticCurveTo(-0.6, -1.75, -1.55, -1.55);
+    const jawMesh = new THREE.Mesh(extrudeCentered(jawShape, 0.9, 0.06), boneMat);
+    jawMesh.position.z = -0.75;
+    toothBaseGroup.add(jawMesh);
+
+    // Pulp chamber profile (shared by infected pulp + gutta fill)
+    function pulpChamberShape() {
+      const p = new THREE.Shape();
+      p.moveTo(-0.25, 0.48);
+      p.quadraticCurveTo(-0.28, 0.66, -0.12, 0.74);
+      p.quadraticCurveTo(0, 0.78, 0.12, 0.74);
+      p.quadraticCurveTo(0.28, 0.66, 0.25, 0.48);
+      p.quadraticCurveTo(0.22, 0.38, 0, 0.38);
+      p.quadraticCurveTo(-0.22, 0.38, -0.25, 0.48);
+      return p;
+    }
+    // Curved canal paths following the roots (chamber -> apex)
+    function canalPoints(sign) {
+      return [
+        new THREE.Vector3(sign * 0.20, 0.50, 0.06),
+        new THREE.Vector3(sign * 0.30, 0.05, 0.06),
+        new THREE.Vector3(sign * 0.33, -0.55, 0.06),
+        new THREE.Vector3(sign * 0.29, -1.12, 0.06)
+      ];
+    }
+
+    // 1. Infected pulp: chamber + curved canals, gently pulsing
+    const pulpChamber = new THREE.Mesh(
+      new THREE.ExtrudeGeometry(pulpChamberShape(), { depth: 0.1, bevelEnabled: false, curveSegments: 16 }),
+      infectedPulpMat
+    );
+    pulpGroup.add(pulpChamber);
+    [1, -1].forEach(sign => {
+      const curve = new THREE.CatmullRomCurve3(canalPoints(sign));
+      pulpGroup.add(new THREE.Mesh(new THREE.TubeGeometry(curve, 24, 0.05, 12, false), infectedPulpMat));
+    });
+
+    // 2. Rotary Ni-Ti files: tapered, spin as they descend into the canals
+    [1, -1].forEach(sign => {
+      const file = new THREE.Mesh(new THREE.CylinderGeometry(0.045, 0.014, 2.3, 12), rotaryFileMat);
+      file.position.set(sign * 0.31, 0, 0.06);
+      fileGroup.add(file);
+      const handle = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.15, 0.32, 16), fileHandleMat);
+      handle.position.set(sign * 0.31, 1.31, 0.06);
+      fileGroup.add(handle);
+    });
+
+    // 3. Gutta-percha: canals fill from apex upward (drawRange reveal), chamber fills too
+    const GUTTA_TUBE_SEGS = 40, GUTTA_TUBE_RADIAL = 10;
+    const GUTTA_INDICES = GUTTA_TUBE_SEGS * GUTTA_TUBE_RADIAL * 6;
+    const guttaTubes = [];
+    [1, -1].forEach(sign => {
+      const pts = canalPoints(sign).slice().reverse(); // apex first -> reveal grows upward
+      const curve = new THREE.CatmullRomCurve3(pts);
+      const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, GUTTA_TUBE_SEGS, 0.055, GUTTA_TUBE_RADIAL, false), guttaPerchaMat);
+      tube.geometry.setDrawRange(0, 0);
+      guttaTubes.push(tube);
+      guttaGroup.add(tube);
+    });
+    const guttaChamberGeo = new THREE.ExtrudeGeometry(pulpChamberShape(), { depth: 0.1, bevelEnabled: false, curveSegments: 16 });
+    guttaChamberGeo.translate(0, -0.38, 0); // pivot at chamber floor
+    const guttaChamber = new THREE.Mesh(guttaChamberGeo, guttaPerchaMat);
+    guttaChamber.position.set(0, 0.38, 0);
+    guttaChamber.scale.y = 0.01;
+    guttaGroup.add(guttaChamber);
+
+    function applyGuttaReveal() {
+      const n = Math.floor(guttaReveal * GUTTA_INDICES);
+      guttaTubes.forEach(t => t.geometry.setDrawRange(0, n));
+      guttaChamber.scale.y = Math.max(0.01, guttaReveal);
+    }
+
+    // 4. Monolithic zirconia crown: anatomical cap, descends and seats
+    const crownShape = new THREE.Shape();
+    crownShape.moveTo(-0.98, 0.30);
+    crownShape.quadraticCurveTo(-1.02, 0.70, -0.92, 1.02);
+    crownShape.quadraticCurveTo(-0.80, 1.28, -0.50, 1.36);
+    crownShape.quadraticCurveTo(-0.20, 1.42, 0, 1.38);
+    crownShape.quadraticCurveTo(0.20, 1.42, 0.50, 1.36);
+    crownShape.quadraticCurveTo(0.80, 1.28, 0.92, 1.02);
+    crownShape.quadraticCurveTo(1.02, 0.70, 0.98, 0.30);
+    crownShape.quadraticCurveTo(0.50, 0.22, 0, 0.22);
+    crownShape.quadraticCurveTo(-0.50, 0.22, -0.98, 0.30);
+    const crownMesh = new THREE.Mesh(extrudeCentered(crownShape, 0.95, 0.07), zirconiaCrownMat);
+    crownGroup.add(crownMesh);
+
+    // ---------- Floating 3D Part Labels ----------
+    function makeAnchor(parent, x, y, z) {
+      const o = new THREE.Object3D();
+      o.position.set(x, y, z);
+      parent.add(o);
+      return o;
+    }
+
+    const pulpAnchor = makeAnchor(pulpGroup, 0.30, 0.62, 0.15);
+    const fileAnchor = makeAnchor(fileGroup, 0.42, 1.45, 0.1);
+    const guttaAnchor = makeAnchor(guttaGroup, 0.40, 0.55, 0.15);
+    const crownAnchor = makeAnchor(crownGroup, 0.80, 1.05, 0.3);
+
+    const partLabels = [
+      { text: 'Infected Nerve Pulp', anchor: pulpAnchor, stageActive: 1 },
+      { text: 'Rotary Ni-Ti File', anchor: fileAnchor, stageActive: 2 },
+      { text: 'Gutta-Percha Hermetic Seal', anchor: guttaAnchor, stageActive: 3 },
+      { text: 'Monolithic Zirconia Crown', anchor: crownAnchor, stageActive: 4 }
+    ];
+
+    partLabels.forEach(l => {
+      const el = document.createElement('div');
+      el.className = 'part-label';
+      el.textContent = l.text;
+      viewer.appendChild(el);
+      l.el = el;
+    });
+
+    const _lv = new THREE.Vector3();
+    function updatePartLabels() {
+      const w = viewer.clientWidth, h = viewer.clientHeight;
+      partLabels.forEach(l => {
+        if (stage !== l.stageActive) { l.el.style.opacity = '0'; return; }
+        l.anchor.getWorldPosition(_lv).project(camera);
+        if (_lv.z > 1) { l.el.style.opacity = '0'; return; }
+        l.el.style.opacity = '1';
+        l.el.style.left = ((_lv.x * 0.5 + 0.5) * w).toFixed(1) + 'px';
+        l.el.style.top = ((-_lv.y * 0.5 + 0.5) * h).toFixed(1) + 'px';
+      });
+    }
+
+    // ---------- Clinical Progression Stages ----------
+    const stageData = {
+      1: {
+        title: '1. Bacterial Decay & Nerve Infection',
+        text: 'Decay breaches the protective enamel and dentin layers, infecting the vascular dental pulp and creating severe throbbing periapical pressure.'
+      },
+      2: {
+        title: '2. Rotary Micro-Canal Shaping',
+        text: 'Motorized flexible Nickel-Titanium (Ni-Ti) files glide safely through root canal curves to clear bacteria and necrotic pulp tissue with zero vibration.'
+      },
+      3: {
+        title: '3. 3D Hermetic Gutta-Percha Seal',
+        text: 'Sterile warm vertical gutta-percha and bioceramic sealer flow into every microscopic lateral canal, sealing the root apex permanently against reinfection.'
+      },
+      4: {
+        title: '4. Full Monolithic Zirconia Crown Seating',
+        text: 'A computer-milled (CAD/CAM) monolithic zirconia crown cements over the post-and-core foundation, shielding the tooth and restoring full chewing strength.'
+      }
+    };
+
+    const REST = { fileY: 0, crownY: 0 };
+    const HOVER = { fileY: 2.6, crownY: 2.4 };
+
+    let stage = 1;
+    let highestStage = 1;
+    let exploded = false;
+    let animationBusy = false;
+    let pulpOpacity = 1;
+    let guttaReveal = 0;
+
+    function applyVisibility(s) {
+      pulpGroup.visible = (s === 1);
+      fileGroup.visible = (s === 2);
+      guttaGroup.visible = (s >= 3);
+      crownGroup.visible = (s === 4);
+    }
+
+    function updateStepButtons() {
+      document.querySelectorAll('.step').forEach(btn => {
+        const n = +btn.dataset.stage;
+        btn.classList.toggle('active', n === stage);
+        btn.classList.toggle('done', n < highestStage || (n === highestStage && highestStage === 4));
+        const locked = (n !== 1 && n !== highestStage + 1) || (animationBusy && n !== stage);
+        btn.classList.toggle('locked', locked);
+        btn.disabled = locked;
+        btn.setAttribute('aria-disabled', locked ? 'true' : 'false');
+      });
+    }
+
+    function resetToInfection() {
+      stage = 1;
+      highestStage = 1;
+      animationBusy = false;
+      exploded = false;
+      pulpOpacity = 1;
+      infectedPulpMat.opacity = 1;
+      infectedPulpMat.emissiveIntensity = 0.8;
+      pulpGroup.visible = true;
+      pulpGroup.position.z = 0;
+      guttaReveal = 0;
+      applyGuttaReveal();
+      applyVisibility(1);
+      fileGroup.position.y = HOVER.fileY;
+      fileGroup.rotation.y = 0;
+      guttaGroup.position.y = 0;
+      crownGroup.position.y = REST.crownY;
+      document.getElementById('explode').textContent = 'EXPLODE LAYERS';
+      document.getElementById('stageTitle').textContent = stageData[1].title;
+      document.getElementById('stageText').textContent = stageData[1].text;
+      updateStepButtons();
+    }
+    function snapFeedback() {
+      viewer.classList.remove('snap-flash');
+      void viewer.offsetWidth;
+      viewer.classList.add('snap-flash');
+      setTimeout(() => viewer.classList.remove('snap-flash'), 250);
+      if (navigator.vibrate) {
+        try { navigator.vibrate(12); } catch (e) {}
+      }
+    }
+
+    function setStage(n, animate = true) {
+      if (n === 1) {
+        resetToInfection();
+        return;
+      }
+      if (n !== highestStage + 1 || animationBusy) return;
+
+      stage = n;
+      highestStage = n;
+      document.getElementById('stageTitle').textContent = stageData[n].title;
+      document.getElementById('stageText').textContent = stageData[n].text;
+
+      applyVisibility(n);
+
+      if (n === 2) {
+        fileGroup.position.y = HOVER.fileY;
+        fileGroup.rotation.y = 0;
+        animationBusy = animate;
+        snapFeedback();
+      } else if (n === 3) {
+        guttaReveal = 0;
+        applyGuttaReveal();
+        animationBusy = animate;
+        snapFeedback();
+      } else if (n === 4) {
+        crownGroup.position.y = HOVER.crownY;
+        animationBusy = animate;
+      }
+
+      updateStepButtons();
+    }
+    document.querySelectorAll('.step').forEach(btn => {
+      btn.addEventListener('click', () => setStage(+btn.dataset.stage, true));
+    });
+
+    // Touch Interaction Shield
+    const shield = document.getElementById('interactionShield');
+    const anatomyCard = document.getElementById('anatomyCard');
+
+    if (shield) {
+      shield.addEventListener('click', () => {
+        shield.classList.add('is-active');
+        controls.enabled = true;
+      });
+    }
+
+    document.addEventListener('pointerdown', (e) => {
+      if (anatomyCard && !anatomyCard.contains(e.target) && shield) {
+        shield.classList.remove('is-active');
+        controls.enabled = false;
+      }
+    });
+
+    // Viewer Tools
+    document.getElementById('explode').addEventListener('click', e => {
+      exploded = !exploded;
+      e.currentTarget.textContent = exploded ? 'ASSEMBLE LAYERS' : 'EXPLODE LAYERS';
+      if (exploded) {
+        crownGroup.position.y = 1.5;
+        guttaGroup.position.y = 0.75;
+        fileGroup.position.y = 2.3;
+        pulpGroup.position.z = 0.85;
+      } else {
+        crownGroup.position.y = REST.crownY;
+        guttaGroup.position.y = 0;
+        fileGroup.position.y = REST.fileY;
+        pulpGroup.position.z = 0;
+      }
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+      camera.position.set(4.6, 2.1, 6.5);
+      controls.target.set(0, -0.1, 0);
+      controls.update();
+      resetToInfection();
+    });
+
+    let autoplayRunning = false;
+    function playFullBuild() {
+      if (autoplayRunning) return;
+      autoplayRunning = true;
+      const sequence = [2, 3, 4];
+      let idx = 0;
+      function advance() {
+        if (idx >= sequence.length) { autoplayRunning = false; return; }
+        if (animationBusy) { setTimeout(advance, 120); return; }
+        setStage(sequence[idx], true);
+        idx++;
+        setTimeout(advance, 700);
+      }
+      advance();
+    }
+
+    document.getElementById('playBuild').addEventListener('click', () => {
+      resetToInfection();
+      setTimeout(playFullBuild, 300);
+    });
+
+    resetToInfection();
+
+    function resize() {
+      const w = viewer.clientWidth, h = viewer.clientHeight;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Render & Physics Loop
+    let lastTime = performance.now();
+    function animate() {
+      requestAnimationFrame(animate);
+      const now = performance.now();
+      const dt = Math.min(0.04, (now - lastTime) / 1000);
+      lastTime = now;
+
+      // Smooth Settling Animations
+      if (stage === 1 && pulpGroup.visible) {
+        infectedPulpMat.emissiveIntensity = 0.48 + 0.24 * (0.5 + 0.5 * Math.sin(now * 0.0055));
+      }
+      if (stage === 2 && !exploded) {
+        if (fileGroup.position.y > REST.fileY) {
+          fileGroup.position.y += (REST.fileY - fileGroup.position.y) * Math.min(1, dt * 5.0);
+          fileGroup.rotation.y += dt * 7.5;
+          if (Math.abs(fileGroup.position.y - REST.fileY) < 0.01) {
+            fileGroup.position.y = REST.fileY;
+          }
+        } else if (pulpOpacity > 0) {
+          pulpOpacity = Math.max(0, pulpOpacity - dt * 1.4);
+          infectedPulpMat.opacity = pulpOpacity;
+          if (pulpOpacity === 0) {
+            pulpGroup.visible = false;
+            animationBusy = false;
+            updateStepButtons();
+          }
+        }
+      }
+
+      if (stage === 3 && !exploded) {
+        if (guttaReveal < 1) {
+          guttaReveal = Math.min(1, guttaReveal + dt * 0.55);
+          applyGuttaReveal();
+          if (guttaReveal >= 1) {
+            animationBusy = false;
+            updateStepButtons();
+          }
+        }
+      }
+
+      if (stage === 4 && crownGroup.position.y > REST.crownY && !exploded) {
+        crownGroup.position.y += (REST.crownY - crownGroup.position.y) * Math.min(1, dt * 6.5);
+        if (Math.abs(crownGroup.position.y - REST.crownY) < 0.015) {
+          crownGroup.position.y = REST.crownY;
+          animationBusy = false;
+          snapFeedback();
+          updateStepButtons();
+        }
+      }
+
+      controls.update();
+      updatePartLabels();
+      renderer.render(scene, camera);
+    }
+    animate();
+  })();
+  </script>
+</body>
+</html>

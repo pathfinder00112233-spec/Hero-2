@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#0a3834" name="theme-color"/>
+<title>Dental Implants 3D Explorer | Perfect SMILE</title>
+<meta content="Interactive 3D dental implant surgery explorer, transparent surgical pricing tiers, and specialist placement by Dr. Prvish Rathee (BDS, MIDA – PGIMS) at Perfect SMILE." name="description"/>
+<link href="https://mintclinicrohtak.com/implants.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="article" property="og:type"/>
+<meta content="Dental Implants 3D Explorer | Perfect SMILE" property="og:title"/>
+<meta content="Inspect interactive 3D implant anatomy and explore transparent fixed teeth pricing." property="og:description"/>
+<meta content="https://mintclinicrohtak.com/implants.html" property="og:url"/>
+<meta content="https://mintclinicrohtak.com/hero-desktop.webp" property="og:image"/>
+<!-- Structured Data for Local SEO -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalProcedure","name":"Dental Implant Restoration","procedureType":"SurgicalProcedure","bodyLocation":"Mouth","howPerformed":"Computer-guided surgical placement of a medical titanium fixture into the jawbone followed by attachment of a custom monolithic zirconia crown.","performer":{"@context":"https://schema.org","@type":"Dentist","@id":"https://mintclinicrohtak.com/#clinic","name":"Perfect SMILE","url":"https://mintclinicrohtak.com/","image":"https://mintclinicrohtak.com/hero-desktop.webp","telephone":["+919253993999","+919034467399"],"priceRange":"₹₹₹","medicalSpecialty":"Dentistry","address":{"@type":"PostalAddress","streetAddress":"Indira Market, Opposite Radhe Radhe Park, Near Oxygen Hospital, Babra Mohalla","addressLocality":"Rohtak","addressRegion":"Haryana","postalCode":"124001","addressCountry":"IN"},"founder":{"@type":"Person","name":"Dr. Prvish Rathee","jobTitle":"Lead Surgeon","hasCredential":"BDS, MIDA – PGIMS"},"hasMap":"https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac","sameAs":["https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac"],"areaServed":[{"@type":"Place","name":"Babra Mohalla"},{"@type":"Place","name":"Indira Market"},{"@type":"Place","name":"Model Town"},{"@type":"Place","name":"D-Park"},{"@type":"Place","name":"Delhi Road"},{"@type":"Place","name":"PGIMS Complex"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"14:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"16:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"10:00","closes":"12:00","description":"Strictly By Appointment"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","bestRating":"5","reviewCount":76,"ratingCount":76},"employee":[{"@type":"Person","name":"Dr. Prvish Rathee","jobTitle":"Lead Surgeon","hasCredential":"BDS, MIDA – PGIMS"},{"@type":"Person","name":"Dr. Nidhi Sharma","jobTitle":"Associate Surgeon","hasCredential":"BDS, MIDA – PGIMS"}]}}</script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-canvas: #faf8f4;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f4ede2;
+
+      --text-main: #14211e;
+      --text-muted: #53645e;
+
+      --teal-primary: #0a3834;
+      --teal-hover: #062623;
+      --teal-soft: #f0f7f5;
+      --teal-border: #b8ded7;
+
+      --emerald-accent: #047857;
+      --emerald-soft: #ecfdf5;
+
+      --gold-primary: #b5893b;
+      --gold-accent: #8e651e;
+      --gold-soft: #fcf8f0;
+      --gold-border: #ebd9b5;
+
+      --border-color: #ebe4d8;
+      --shadow-sm: 0 1px 3px rgba(10, 56, 52, 0.04);
+      --shadow-card: 0 4px 18px -2px rgba(10, 56, 52, 0.06);
+      --shadow-desk: 0 18px 45px -8px rgba(10, 56, 52, 0.16);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      background-color: var(--bg-canvas);
+    }
+
+    body {
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 96px;
+    }
+
+    @media (min-width: 900px) and (orientation: landscape) {
+      body { padding-bottom: 0; }
+    }
+
+    .fluid-section-band {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 clamp(16px, 3.5vw, 44px);
+    }
+
+    .serif-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.01em;
+    }
+
+    /* ==========================================================
+       1. SEAMLESS EDITORIAL HEADER
+    =========================================================== */
+    .site-nav-header {
+      width: 100%;
+      padding-top: clamp(14px, 2.5vw, 22px);
+      padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: transparent;
+      border: none !important;
+    }
+
+    .header-brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .gold-tooth-icon {
+      width: clamp(32px, 3.2vw, 38px);
+      height: clamp(32px, 3.2vw, 38px);
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px rgba(181, 137, 59, 0.28));
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-name-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.15rem, 3.2vw, 1.55rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--teal-primary);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-tagline-sans {
+      font-size: clamp(0.48rem, 1.3vw, 0.60rem);
+      color: var(--teal-primary);
+      opacity: 0.88;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .back-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal-primary);
+      text-decoration: none;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: #ffffff;
+      padding: 9px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .back-nav-btn:hover {
+      background: var(--teal-primary);
+      color: #ffffff;
+      border-color: var(--teal-primary);
+    }
+
+    /* 2. COMPACT HERO HEADER */
+    .compact-hero-block {
+      margin-top: 12px;
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .eyebrow-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill-tag {
+      display: inline-block;
+      background: var(--gold-soft);
+      color: var(--gold-accent);
+      border: 1px solid var(--gold-border);
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .specialist-badge-top {
+      font-size: 0.70rem;
+      font-weight: 800;
+      color: var(--emerald-accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .compact-hero-block h1 {
+      font-size: clamp(2.1rem, 5.2vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.10;
+      color: var(--teal-primary);
+    }
+
+    /* ==========================================================
+       3. ZERO-BOX FLOATING 3D SHOWROOM (VIDEO 1 STANDARD)
+    =========================================================== */
+    .anatomy-floating-stage {
+      width: 100%;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 12px 0 38px;
+      position: relative;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 680px) {
+      .steps {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+
+    .step {
+      appearance: none;
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 12px 10px;
+      text-align: center;
+      font-family: inherit;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      color: var(--text-main);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      line-height: 1.2;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step span {
+      font-size: 0.62rem;
+      font-weight: 600;
+      text-transform: none;
+      color: var(--text-muted);
+    }
+
+    .step:hover:not(:disabled) {
+      border-color: var(--teal-primary);
+      background: var(--teal-soft);
+    }
+
+    .step.active {
+      background: var(--teal-primary);
+      border-color: var(--teal-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(10, 56, 52, 0.20);
+    }
+
+    .step.active span {
+      color: #d8eee9;
+    }
+
+    .step.locked, .step:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      background: #faf6ef;
+      color: var(--text-main);
+    }
+
+    .step.locked span, .step:disabled span {
+      color: var(--text-muted);
+    }
+
+    /* PURE UNBOXED FLOATING VIEWPORT */
+    .viewer {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: radial-gradient(
+        ellipse 70% 64% at 50% 50%,
+        rgba(54, 78, 75, 0.52) 0%,
+        rgba(30, 49, 47, 0.34) 48%,
+        rgba(8, 17, 16, 0.12) 80%
+      ),
+      linear-gradient(145deg, #172725 0%, #0d1a19 52%, #081110 100%) !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    @media (min-width: 900px) {
+      .viewer {
+        height: 370px;
+      }
+    }
+
+    #scene {
+      width: 100%;
+      height: 100%;
+      display: block;
+      touch-action: pan-y !important;
+      background: transparent;
+    }
+
+    .viewer-label {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      z-index: 2;
+      color: var(--teal-primary);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 8px rgba(10, 56, 52, 0.05);
+      pointer-events: none;
+    }
+
+    .viewer-hint {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--teal-primary);
+      background: rgba(255, 255, 255, 0.94);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 11px;
+      white-space: nowrap;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 8px rgba(10, 56, 52, 0.06);
+      pointer-events: none;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    /* Snap-in pulse flash */
+    .viewer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 55%, rgba(181, 137, 59, 0.24), transparent 62%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .viewer.snap-flash::after {
+      opacity: 1;
+    }
+
+    /* Mobile Interaction Shield (Safe Scrolling Guaranteed) */
+    .interaction-shield {
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 30px;
+      gap: 8px;
+      z-index: 10;
+      cursor: pointer;
+      transition: opacity 0.25s ease;
+    }
+
+    .interaction-shield.is-active {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .shield-badge {
+      background: #ffffff;
+      color: var(--teal-primary);
+      border: 1.5px solid var(--gold-border);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 9px 22px;
+      border-radius: 999px;
+      box-shadow: 0 4px 18px rgba(10, 56, 52, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .shield-subtext {
+      font-size: 0.70rem;
+      color: var(--teal-primary);
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    /* Floating 3D part labels (projected each frame) */
+    .part-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -140%);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #e3d5b8;
+      color: #0a3834;
+      font-size: 0.60rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 6;
+      box-shadow: 0 3px 12px rgba(10, 56, 52, 0.14);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .part-label::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 5px;
+      height: 5px;
+      margin: 3px 0 0 -2.5px;
+      border-radius: 50%;
+      background: #0a3834;
+    }
+
+    .viewer-tools {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-top: 14px;
+      padding: 0 4px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool {
+      background: #ffffff;
+      border: 1.2px solid var(--border-color);
+      color: var(--teal-primary);
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 7px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tool:hover {
+      background: var(--teal-soft);
+      border-color: var(--teal-primary);
+    }
+
+    .tool.tool-primary {
+      background: var(--teal-primary);
+      border-color: var(--teal-primary);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(10, 56, 52, 0.18);
+    }
+
+    .tool.tool-primary:hover {
+      background: var(--teal-hover);
+      border-color: var(--teal-hover);
+      color: #ffffff;
+    }
+
+    .state-narrative-banner {
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      font-size: 0.82rem;
+      color: var(--text-main);
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.45;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .state-narrative-banner strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--gold-accent);
+    }
+
+    /* EDITORIAL SECTION HEADINGS */
+    .editorial-heading-group {
+      margin: 44px 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .editorial-subhead {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-accent);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .section-display-title {
+      font-size: clamp(1.75rem, 3.6vw, 2.4rem);
+      font-weight: 700;
+      color: var(--teal-primary);
+      line-height: 1.2;
+    }
+
+    /* 4. SEAMLESS PRICING TIERS */
+    .pricing-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 12px;
+      margin-bottom: 36px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-cards-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    .price-tier-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px 22px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .price-tier-card.featured {
+      background: var(--teal-soft);
+      border: 1.5px solid var(--teal-border);
+      color: var(--text-main);
+      box-shadow: 0 8px 24px -4px rgba(10, 56, 52, 0.10);
+    }
+
+    .price-tier-card.featured .price-tier-title {
+      color: var(--teal-primary);
+    }
+
+    .price-tier-card.featured .price-tier-figure {
+      color: var(--emerald-accent);
+    }
+
+    .price-tier-card.featured .price-tier-includes {
+      color: var(--text-muted);
+    }
+
+    .price-tier-card.featured::before {
+      content: 'MOST COMMON';
+      position: absolute;
+      top: -10px;
+      left: 18px;
+      background: var(--gold-primary);
+      color: #ffffff;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .price-tier-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--teal-primary);
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .price-tier-figure {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--emerald-accent);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .price-tier-includes {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.48;
+      font-weight: 500;
+    }
+
+    /* 5. SEAMLESS COMPARISON TABLE */
+    .comp-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 14px 0 38px 0;
+      background: transparent;
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      min-width: 580px;
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comp-table th, .comp-table td {
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .comp-table th {
+      background: var(--bg-subtle);
+      font-weight: 800;
+      color: var(--teal-primary);
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+    }
+
+    .comp-table td strong { color: var(--teal-primary); }
+
+    /* 6. SEAMLESS DOCTOR EDITORIAL PROFILE */
+    .doctor-feature-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-top: 14px;
+      margin-bottom: 38px;
+      width: 100%;
+    }
+
+    .doctor-photo-frame {
+      position: relative;
+      width: 110px;
+      height: 132px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(10, 56, 52, 0.1);
+    }
+
+    .doctor-photo-rect {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    
+
+    .doctor-monogram {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #f5e0a3;
+      background: linear-gradient(135deg, #0a3834 0%, #155048 60%, #0a3834 100%);
+    }
+.doctor-photo-badge {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(10, 56, 52, 0.9);
+      color: #ffffff;
+      font-size: 0.46rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 4px;
+      text-align: center;
+    }
+
+    .doctor-details-block {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .doc-lead-eyebrow {
+      font-size: 0.66rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .doc-name-serif {
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--teal-primary);
+    }
+
+    .doc-degrees-line {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-top: 3px;
+    }
+
+    .doc-reg-number {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--emerald-accent);
+      margin-top: 1px;
+    }
+
+    .doc-institution-line {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.48;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    /* 7. FAQ ACCORDION */
+    .faq-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+      margin-bottom: 28px;
+      width: 100%;
+    }
+
+    details {
+      background: #ffffff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: border-color 0.15s ease;
+    }
+
+    details[open] { border-color: var(--teal-border); }
+
+    summary {
+      padding: 16px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--teal-primary);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.15rem;
+      color: var(--gold-accent);
+      font-weight: 800;
+    }
+    details[open] summary::after { content: '−'; }
+
+    details p {
+      padding: 0 18px 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* 8. WHATSAPP 1-TAP BOOKING DESK */
+    .desk-card {
+      width: 100%;
+      background: #ffffff;
+      border: 2px solid var(--teal-primary);
+      border-radius: var(--radius-lg);
+      padding: clamp(24px, 3.5vw, 40px);
+      box-shadow: var(--shadow-desk);
+      margin-top: 36px;
+      text-align: center;
+      position: relative;
+    }
+
+    .desk-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #0a3834, #b5893b);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .desk-card h3 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--teal-primary);
+      margin-bottom: 6px;
+    }
+
+    .desk-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .whatsapp-booking-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto;
+      background: var(--teal-primary);
+      color: #ffffff !important;
+      padding: 16px 24px;
+      border-radius: var(--radius-md);
+      font-size: 0.94rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(10, 56, 52, 0.25);
+      transition: background-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .whatsapp-booking-btn:hover {
+      background: var(--teal-hover);
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-booking-btn svg { color: #25d366; }
+
+    .site-footer {
+      margin-top: 56px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      width: 100%;
+    }
+
+    /* 9. MOBILE FLOATING ACTION BAR */
+    .mobile-action-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(250, 248, 244, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-color);
+      padding: 12px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+      box-shadow: 0 -4px 12px rgba(10, 56, 52, 0.05);
+    }
+
+    @media (min-width: 900px) and (orientation: landscape) {
+      .mobile-action-bar { display: none; }
+    }
+
+    .mobile-call-btn, .mobile-book-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      padding: 13px 0;
+      font-weight: 700;
+    }
+
+    .mobile-call-btn {
+      flex: 1;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-color);
+      color: var(--text-main);
+      gap: 6px;
+      font-size: 0.88rem;
+    }
+
+    .mobile-book-btn {
+      flex: 2;
+      background: var(--teal-primary);
+      color: #ffffff;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      border: none;
+      box-shadow: 0 4px 12px rgba(10, 56, 52, 0.2);
+    }
+    /* Mobile header fix: keep the full Perfect SMILE name visible and prevent nav overlap. */
+    @media (max-width: 600px) {
+      .site-nav-header {
+        gap: 8px;
+      }
+
+      .header-brand-link {
+        gap: 8px;
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .brand-text-block {
+        min-width: 0;
+      }
+
+      .brand-name-serif {
+        font-size: clamp(0.98rem, 4.1vw, 1.25rem);
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: clip;
+        letter-spacing: 0.02em;
+      }
+
+      .brand-tagline-sans {
+        font-size: clamp(0.40rem, 1.45vw, 0.52rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .back-nav-btn {
+        flex: 0 0 auto;
+        padding: 8px 9px;
+        font-size: 0.64rem;
+        letter-spacing: 0.025em;
+        gap: 4px;
+      }
+    }
+
+      .site-footer-inner { max-width: 760px; margin: 0 auto; }
+    .footer-brand { color: var(--teal-primary); letter-spacing: 0.04em; font-size: 0.95rem; margin-bottom: 10px; }
+    .footer-address, .footer-contact { margin: 6px 0; line-height: 1.65; }
+    .footer-contact a, .footer-nav a { color: var(--teal-primary); text-decoration: none; font-weight: 600; }
+    .footer-contact a:hover, .footer-nav a:hover { text-decoration: underline; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 6px 20px; justify-content: center; margin: 14px 0 6px; font-size: 0.82rem; }
+    .footer-legal { margin-top: 10px; font-size: 0.72rem; opacity: 0.85; }
+  </style>
+<style id="mint-clinic-directions-style">
+.get-directions-btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+  background:#1769e0 !important;
+  color:#fff !important;
+  padding:14px 24px !important;
+  border-radius:10px !important;
+  font-size:16px !important;
+  font-weight:800 !important;
+  line-height:1.2 !important;
+  text-decoration:none !important;
+  box-shadow:0 5px 14px rgba(23,105,224,.25) !important;
+  min-height:50px !important;
+  border:0 !important;
+  cursor:pointer !important;
+}
+.get-directions-btn::before{
+  content:"" !important;
+  width:22px !important;
+  height:22px !important;
+  display:inline-block !important;
+  flex:0 0 22px !important;
+  background:url('https://maps.google.com/mapfiles/ms/icons/blue-dot.png') center/contain no-repeat !important;
+}
+.get-directions-btn:hover{
+  background:#0f56bf !important;
+  color:#fff !important;
+  transform:translateY(-1px) !important;
+}
+</style>
+<style id="header-back-button-fix">
+/* Clean one-row mobile header and compact back button */
+.site-nav-header {
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:10px !important;
+  min-width:0 !important;
+}
+.header-brand-link {
+  min-width:0 !important;
+  flex:1 1 auto !important;
+}
+.back-nav-btn {
+  flex:0 0 auto !important;
+  white-space:nowrap !important;
+  max-width:fit-content !important;
+}
+@media (max-width:600px) {
+  .site-nav-header { gap:6px !important; }
+  .header-brand-link { gap:6px !important; }
+  .gold-tooth-icon { width:30px !important; height:30px !important; }
+  .brand-name-serif {
+    font-size:0.92rem !important;
+    letter-spacing:0.01em !important;
+  }
+  .brand-tagline-sans {
+    font-size:0.40rem !important;
+    letter-spacing:0.06em !important;
+  }
+  .back-nav-btn {
+    padding:7px 8px !important;
+    font-size:0.58rem !important;
+    letter-spacing:0.01em !important;
+    gap:3px !important;
+  }
+}
+</style>
+<style id="smooth-scroll">body{scroll-behavior:smooth;}</style>
+<style id="mobile-3d-performance">
+  .canvas-viewport-wrapper, #aligner-canvas-container, #scene {
+    contain: layout paint style;
+  }
+  .canvas-viewport-wrapper canvas,
+  #aligner-canvas-container canvas {
+    touch-action: pan-y;
+  }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the implant placement painful?","acceptedAnswer":{"@type":"Answer","text":"No. The entire procedure is performed under computerized local anesthesia. Patients routinely report feeling only gentle vibration and mild pressure. Postoperative discomfort is mild and easily managed with standard oral medication."}},{"@type":"Question","name":"What is included in the ₹25,000 – ₹45,000 estimate?","acceptedAnswer":{"@type":"Answer","text":"Our single-tooth estimate includes the 3D surgical planning scan, the biocompatible medical titanium root fixture, the precision-milled titanium abutment connector, and the final custom monolithic zirconia crown."}},{"@type":"Question","name":"How long does the entire process take?","acceptedAnswer":{"@type":"Answer","text":"The surgical placement takes only 45–60 minutes. Following placement, a 3-month healing period allows the titanium post to naturally bond with your bone (osseointegration) before the permanent crown is attached."}},{"@type":"Question","name":"Do you offer flexible staged payments?","acceptedAnswer":{"@type":"Answer","text":"Yes. Payments are split across milestones: part during surgical fixture placement, and the remainder upon final crown delivery."}}]}</script>
+<link href="site.css" rel="stylesheet"/>
+<script defer="" src="site.js"></script>
+</head>
+<body>
+<!-- 1. FULL-BLEED SEAMLESS HEADER (SMART BACK NAVIGATION) -->
+<header class="site-nav-header fluid-section-band">
+<a aria-label="Perfect SMILE Home" class="header-brand-link" href="index.html">
+<svg aria-hidden="true" class="gold-tooth-icon" fill="none" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="apexGoldShine" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#f5e0a3"></stop>
+<stop offset="40%" stop-color="#b5893b"></stop>
+<stop offset="80%" stop-color="#8a611c"></stop>
+<stop offset="100%" stop-color="#d6ab58"></stop>
+</lineargradient>
+</defs>
+<path d="M10 4C6.5 4 4 6.8 4 10.8c0 5.2 2.6 11 4.7 16.6.7 2 2.8 2.6 4.1 1.3 1.6-1.6 2.4-4 3.2-6.7.8 2.7 1.6 5.1 3.2 6.7 1.3 1.3 3.4.7 4.1-1.3C25.4 21.8 28 16 28 10.8 28 6.8 25.5 4 22 4c-3.1 0-5 2-6 2s-2.9-2-6-2z" fill="url(#apexGoldShine)" stroke="#8a611c" stroke-width="0.8"></path>
+<path d="M19 8 L20 6 L21 8 L23 9 L21 10 L20 12 L19 10 L17 9 Z" fill="#ffffff"></path>
+</svg>
+<div class="brand-text-block">
+<span class="brand-name-serif">Perfect SMILE</span>
+<span class="brand-tagline-sans">Bus Stand Road · Rohtak</span>
+</div>
+</a>
+<!-- Smart Back Button: Directly returns to #treatments -->
+<a aria-label="Back to Treatments &amp; Cost" class="back-nav-btn" href="index.html#treatments" onclick="if(window.history.length &gt; 1 &amp;&amp; document.referrer.includes(window.location.host)){ window.history.back(); return false; }">
+<span>← Treatments &amp; Cost</span>
+</a>
+</header>
+<!-- WIDESCREEN FLUID CONTENT BAND -->
+<main class="fluid-section-band">
+<!-- 2. COMPACT HERO -->
+<section aria-label="Implant Header" class="compact-hero-block">
+<div class="eyebrow-badge-row">
+<span class="pill-tag">Prosthodontic Implantology</span>
+<span class="specialist-badge-top">Dr. Prvish Rathee</span>
+</div>
+<h1 class="serif-title">Permanent Dental Implants</h1>
+</section>
+<!-- 3. ZERO-BOX FLOATING 3D SHOWROOM SECTION (VIDEO 1 STANDARD) -->
+<section aria-label="Interactive 3D Implant Placement Simulator" class="anatomy-floating-stage" id="anatomyCard">
+<!-- 4-Stage Surgical Progression Deck -->
+<div class="steps" role="tablist">
+<button aria-selected="true" class="step active" data-stage="1" role="tab">
+<strong>1. TOOTH GAP</strong>
+<span>Bone &amp; gum socket</span>
+</button>
+<button aria-selected="false" class="step" data-stage="2" role="tab">
+<strong>2. PLACE POST</strong>
+<span>Anchored in bone</span>
+</button>
+<button aria-selected="false" class="step" data-stage="3" role="tab">
+<strong>3. FIT COLLAR</strong>
+<span>Seals at gumline</span>
+</button>
+<button aria-selected="false" class="step" data-stage="4" role="tab">
+<strong>4. SEAT CROWN</strong>
+<span>Full restoration</span>
+</button>
+</div>
+<div class="viewer">
+<div class="viewer-label">LIVE 3D CLINICAL ANATOMY</div>
+<canvas id="scene"></canvas>
+<!-- Interactive Mobile Shield (Stops Scroll-Trapping) -->
+<div class="interaction-shield" id="interactionShield">
+<div class="shield-badge">
+<span>✦ Tap to Rotate 3D Model ✦</span>
+</div>
+<span class="shield-subtext">Touch and drag freely once unlocked</span>
+</div>
+<div class="viewer-hint">↔ Drag to rotate · Pinch / wheel to zoom</div>
+</div>
+<div class="viewer-tools">
+<span>Interactive anatomical implant explorer</span>
+<div class="tool-row">
+<button class="tool tool-primary" id="playBuild">▶ PLAY FULL BUILD</button>
+<button class="tool" id="explode">EXPLODE LAYERS</button>
+<button class="tool" id="reset">RESET VIEW</button>
+</div>
+</div>
+<!-- Dynamic Surgical State Narrative Banner -->
+<div class="state-narrative-banner">
+<strong id="stageTitle">The tooth gap</strong>
+<span id="stageText">Natural neighboring teeth, gingiva and supporting jawbone remain visible while the missing-tooth position is shown as a clinical cutaway.</span>
+</div>
+</section>
+<!-- 4. TRANSPARENT PRICING TIERS -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Clinical Pricing</span>
+<h2 class="section-display-title serif-title">Transparent Procedural Estimates</h2>
+</div>
+</div>
+<section aria-label="Implant Pricing Breakdown" class="pricing-cards-grid">
+<div class="price-tier-card">
+<div>
+<h3 class="price-tier-title">Single Tooth Implant</h3>
+<div class="price-tier-figure">₹25,000 – ₹45,000</div>
+</div>
+<p class="price-tier-includes">
+          Includes 3D CBCT digital scan, medical titanium root fixture, custom precision abutment, and monolithic zirconia crown.
+         · Emergency Reception: <a href="tel:+919254441687">+91 92544 41687</a></p>
+</div>
+<div class="price-tier-card featured">
+<div>
+<h3 class="price-tier-title">Multiple Teeth (Bridge)</h3>
+<div class="price-tier-figure">₹50,000 – ₹85,000</div>
+</div>
+<p class="price-tier-includes">
+          Replaces 3 to 4 consecutive missing teeth supported securely by 2 titanium fixtures, preserving adjacent healthy tooth enamel.
+        </p>
+</div>
+<div class="price-tier-card">
+<div>
+<h3 class="price-tier-title">Full Arch (All-on-4/6)</h3>
+<div class="price-tier-figure">₹1,80,000 – ₹3,50,000</div>
+</div>
+<p class="price-tier-includes">
+          Permanent fixed hybrid prosthetic restoring a complete upper or lower dental arch on 4 to 6 computer-guided titanium anchors.
+        </p>
+</div>
+</section>
+<!-- 5. CLINICAL COMPARISON TABLE: IMPLANT VS TRADITIONAL TOOTH BRIDGE -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Clinical Decision</span>
+<h2 class="section-display-title serif-title">Dental Implant vs. Traditional Bridge</h2>
+</div>
+</div>
+<section aria-label="Comparison Table" class="comp-table-wrap">
+<table class="comp-table">
+<thead>
+<tr>
+<th>Restorative Feature</th>
+<th>Fixed Dental Implant</th>
+<th>Traditional Tooth-Supported Bridge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Neighbor Tooth Preservation</strong></td>
+<td><strong>100% Untouched</strong> (Zero shaving or grinding of healthy neighbors)</td>
+<td><strong>Damages 2 Healthy Teeth</strong> (Enamel is permanently ground down)</td>
+</tr>
+<tr>
+<td><strong>Jawbone Preservation</strong></td>
+<td><strong>Stimulates Bone</strong> (Prevents facial bone shrinkage permanently)</td>
+<td><strong>Bone Deteriorates</strong> (Bone underneath gap continues to melt away)</td>
+</tr>
+<tr>
+<td><strong>Longevity &amp; Durability</strong></td>
+<td><strong>Lifetime Solution</strong> (Engineered to last with routine oral care)</td>
+<td><strong>7–12 Years Average</strong> (Requires replacement when anchors decay)</td>
+</tr>
+<tr>
+<td><strong>Daily Oral Hygiene</strong></td>
+<td><strong>Normal Flossing</strong> (Clean between teeth just like natural enamel)</td>
+<td><strong>Difficult</strong> (Requires special threaders to floss beneath fused teeth)</td>
+</tr>
+<tr>
+<td><strong>Recurrent Cavity Risk</strong></td>
+<td><strong>Zero</strong> (Medical titanium and zirconia cannot develop cavities)</td>
+<td><strong>High</strong> (Decay often starts under capped supporting teeth)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- 6. SEAMLESS DOCTOR EDITORIAL PROFILE -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Supervising Specialist</span>
+<h2 class="section-display-title serif-title">Clinical Leadership</h2>
+</div>
+</div>
+<div aria-label="Supervising Doctor Profile" class="doctor-feature-entry">
+<div class="doctor-photo-frame">
+<div aria-label="PR logo" class="doctor-monogram">PR</div>
+<div class="doctor-photo-badge">DR. PRVISH RATHEE</div>
+</div>
+<div class="doctor-details-block">
+<span class="doc-lead-eyebrow">Lead Dental Surgeon</span>
+<h3 class="doc-name-serif serif-title">Dr. Prvish Rathee</h3>
+<p class="doc-degrees-line">BDS, MIDA – PGIMS</p>
+<p class="doc-reg-number">Lead Dental Surgeon</p>
+<p class="doc-institution-line">Dr. Prvish Rathee is a Dental Surgeon focusing on preventative, implant, and restorative care.</p>
+</div>
+</div>
+<!-- 7. FREQUENTLY ASKED QUESTIONS -->
+<div class="editorial-heading-group">
+<div>
+<span class="editorial-subhead">Patient Inquiries</span>
+<h2 class="section-display-title serif-title">Frequently Asked Questions</h2>
+</div>
+</div>
+<section aria-label="Patient Questions" class="faq-accordion">
+<details>
+<summary>Is the implant placement painful?</summary>
+<p>
+          No. The entire procedure is performed under computerized local anesthesia. Patients routinely report feeling only gentle vibration and mild pressure. Postoperative discomfort is mild and easily managed with standard oral medication.
+        </p>
+</details>
+<details>
+<summary>What is included in the ₹25,000 – ₹45,000 estimate?</summary>
+<p>
+          Our single-tooth estimate includes the 3D surgical planning scan, the biocompatible medical titanium root fixture, the precision-milled titanium abutment connector, and the final custom monolithic zirconia crown.
+        </p>
+</details>
+<details>
+<summary>How long does the entire process take?</summary>
+<p>
+          The surgical placement takes only 45–60 minutes. Following placement, a 3-month healing period allows the titanium post to naturally bond with your bone (osseointegration) before the permanent crown is attached.
+        </p>
+</details>
+<details>
+<summary>Do you offer flexible staged payments?</summary>
+<p>
+          Yes. Payments are split across milestones: part during surgical fixture placement, and the remainder upon final crown delivery.
+        </p>
+</details>
+</section>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p class="footer-brand serif-title">Perfect SMILE · DR. PRVISH RATHEE</p>
+<p class="footer-address">Indira Market, Opposite Radhe Radhe Park, Near Oxygen Hospital, Babra Mohalla, Rohtak, Haryana 124001</p>
+<p class="footer-contact">Direct Reception: <a href="tel:+919253993999">+91 92539 93999</a> · Hours: Monday to Saturday: 9:30 AM – 2:00 PM | 4:00 PM – 6:30 PM (Sunday: 10:00 AM – 12:00 PM By Appointment) <span class="opd-pill" data-opd="">Checking…</span></p>
+<nav aria-label="Footer SEO navigation" class="footer-nav"><a href="index.html">Home</a><a href="implants.html">Dental Implants 3D</a><a href="aligners.html">Clear Aligners 3D</a><a href="root-canal.html">Root Canal Treatment</a><a href="crowns.html">Dental Crowns</a><a href="veneers.html">Smile Makeover and Porcelain Veneers</a><a href="checkup.html">Dental Check-up and Teeth Cleaning</a><a href="dentist-near-model-town-rohtak.html">Dentist near Model Town, Rohtak</a><a href="dentist-near-d-park-rohtak.html">Dentist near D-Park</a><a href="dentist-near-delhi-road-rohtak.html">Dentist near Delhi Road</a><a href="dentist-near-pgims-rohtak.html">Dentist near PGIMS</a><a href="dentist-near-babra-mohalla-rohtak.html">Dentist near Babra Mohalla</a><a href="dentist-near-indira-market-rohtak.html">Dentist near Indira Market</a></nav>
+<p class="footer-legal">© 2026 Perfect SMILE. All surgical and restorative procedures performed by registered dental surgeons.</p>
+</div>
+</footer>
+</main>
+<!-- 9. MOBILE FLOATING ACTION BAR -->
+<div class="mobile-action-bar">
+<a class="mobile-call-btn" href="tel:+919253993999"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>Call</span></a>
+<a class="mobile-call-btn" href="https://maps.app.goo.gl/pcGEaBugNyQtd7A29?g_st=ac" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Directions</span></a>
+<a class="mobile-book-btn" href="https://wa.me/919034467399?text=Hello%20Dr.%20Neha%20Chhikara%2C%20I%20reviewed%20the%203D%20Implant%20guide%20on%20your%20website%20and%20would%20like%20to%20schedule%20an%20implant%20consultation." rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg><span>Book on WhatsApp</span></a>
+</div>
+<!-- ==========================================================
+       THREE.JS DAYLIGHT CONTRAST ENGINE (ZERO-BOX FLOATING)
+  =========================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+  (() => {
+    const canvas = document.getElementById('scene');
+    const viewer = canvas.parentElement;
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: true,
+      alpha: true, // Transparent WebGL canvas: lets #faf8f4 show through
+      powerPreference: 'high-performance'
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.35));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.physicallyCorrectLights = true;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.0; // Clean, natural exposure
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+    const scene = new THREE.Scene();
+    // Scene background is null -> pure transparency on #faf8f4
+
+    const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
+    camera.position.set(4.8, 1.85, 6.8);
+
+    const controls = new THREE.OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.065;
+    controls.enablePan = false;
+    controls.minDistance = 4.4;
+    controls.maxDistance = 10;
+    controls.target.set(0, -0.15, 0);
+    controls.enabled = false; // Enabled only via user interaction
+
+    // Balanced Daylight Studio Lighting (No Bleaching)
+    scene.add(new THREE.HemisphereLight(0xffffff, 0xdcd2c1, 1.3)); // Soft ambient floor bounce
+    const key = new THREE.DirectionalLight(0xfffaee, 1.6); // Soft key
+    key.position.set(4, 7, 6); scene.add(key);
+    key.castShadow = true;
+    key.shadow.mapSize.set(1024, 1024);
+    key.shadow.camera.near = 1;
+    key.shadow.camera.far = 16;
+    key.shadow.camera.left = -3.5;
+    key.shadow.camera.right = 3.5;
+    key.shadow.camera.top = 3.5;
+    key.shadow.camera.bottom = -3.5;
+    key.shadow.bias = -0.0015;
+    key.shadow.radius = 3.5;
+
+    const fill = new THREE.DirectionalLight(0xdbece8, 0.9); // Gentle cool fill
+    fill.position.set(-5, 3, 4); scene.add(fill);
+    
+    const rim = new THREE.DirectionalLight(0xffdfa8, 0.8); // Subtle warm edge definition
+    rim.position.set(0, 4, -6); scene.add(rim);
+
+    // Studio Reflection Map (PMREM)
+    function buildStudioEnvironment(){
+      const size = 256;
+      const c = document.createElement('canvas');
+      c.width = size; c.height = size;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createLinearGradient(0, 0, 0, size);
+      grad.addColorStop(0, '#ffffff');
+      grad.addColorStop(0.5, '#ede6da');
+      grad.addColorStop(1, '#c5d7d4');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, size, size);
+      const tex = new THREE.CanvasTexture(c);
+      tex.mapping = THREE.EquirectangularReflectionMapping;
+      tex.encoding = THREE.sRGBEncoding;
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      pmrem.compileEquirectangularShader();
+      const envMap = pmrem.fromEquirectangular(tex).texture;
+      tex.dispose();
+      pmrem.dispose();
+      return envMap;
+    }
+    try {
+      scene.environment = buildStudioEnvironment();
+    } catch (e) { }
+
+    // Procedural Organic Micro-Grain
+    function grainTexture(size, strength){
+      const c = document.createElement('canvas');
+      c.width = c.height = size;
+      const ctx = c.getContext('2d');
+      const img = ctx.createImageData(size, size);
+      for(let i = 0; i < img.data.length; i += 4){
+        const v = 128 + (Math.random() - 0.5) * 255 * strength;
+        img.data[i] = img.data[i+1] = img.data[i+2] = v;
+        img.data[i+3] = 255;
+      }
+      ctx.putImageData(img, 0, 0);
+      const tex = new THREE.CanvasTexture(c);
+      tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+      tex.repeat.set(5, 5);
+      return tex;
+    }
+    const gumGrain = grainTexture(128, .25);
+    const boneGrain = grainTexture(128, .35);
+    const enamelGrain = grainTexture(64, .08);
+
+    // High-Definition Contrast Daylight Materials
+    const clinicalGum = new THREE.MeshPhysicalMaterial({
+      color: 0xbf455b, roughness: 0.45, metalness: 0, clearcoat: 0.32, clearcoatRoughness: 0.16,
+      bumpMap: gumGrain, bumpScale: 0.009, envMapIntensity: 0.45
+    });
+    const clinicalGumLight = new THREE.MeshPhysicalMaterial({
+      color: 0xd9687e, roughness: 0.42, metalness: 0, clearcoat: 0.35,
+      bumpMap: gumGrain, bumpScale: 0.007, envMapIntensity: 0.45
+    });
+    // Deep Cortical Bone (Will not bleach against #faf8f4)
+    const boneMat = new THREE.MeshStandardMaterial({
+      color: 0xbfae93, roughness: 0.68, bumpMap: boneGrain, bumpScale: 0.016, envMapIntensity: 0.35
+    });
+    const boneCutMat = new THREE.MeshStandardMaterial({
+      color: 0xd4c6af, roughness: 0.78, bumpMap: boneGrain, bumpScale: 0.019, envMapIntensity: 0.35
+    });
+    const rootMat = new THREE.MeshStandardMaterial({
+      color: 0xcfb272, roughness: 0.45, envMapIntensity: 0.55
+    });
+    const enamel = new THREE.MeshPhysicalMaterial({
+      color: 0xf5f0e6, roughness: 0.18, metalness: 0, clearcoat: 0.85, clearcoatRoughness: 0.06,
+      bumpMap: enamelGrain, bumpScale: 0.002, envMapIntensity: 0.85
+    });
+    // Authentic Deep Surgical Titanium (Distinct & razor-sharp)
+    const implantMat = new THREE.MeshStandardMaterial({
+      color: 0x5a6870, metalness: 0.90, roughness: 0.22, envMapIntensity: 1.2
+    });
+    const implantDark = new THREE.MeshStandardMaterial({
+      color: 0x364147, metalness: 0.94, roughness: 0.28, envMapIntensity: 1.2
+    });
+
+    const anatomy = new THREE.Group();
+    scene.add(anatomy);
+
+    // Realistic Grounding Contact Shadow directly on ivory canvas
+    const shadowCanvas = document.createElement('canvas');
+    shadowCanvas.width = shadowCanvas.height = 128;
+    const sCtx = shadowCanvas.getContext('2d');
+    const sGrad = sCtx.createRadialGradient(64, 64, 0, 64, 64, 60);
+    sGrad.addColorStop(0, 'rgba(20, 35, 32, 0.26)');
+    sGrad.addColorStop(0.38, 'rgba(20, 35, 32, 0.10)');
+    sGrad.addColorStop(0.75, 'rgba(20, 35, 32, 0.02)');
+    sGrad.addColorStop(1, 'rgba(20, 35, 32, 0)');
+    sCtx.fillStyle = sGrad;
+    sCtx.fillRect(0, 0, 128, 128);
+    const shadowTexture = new THREE.CanvasTexture(shadowCanvas);
+    const shadowPlane = new THREE.Mesh(
+      new THREE.PlaneGeometry(7.2, 3.8),
+      new THREE.MeshBasicMaterial({ map: shadowTexture, transparent: true, depthWrite: false })
+    );
+    shadowPlane.rotation.x = -Math.PI / 2;
+    shadowPlane.position.set(0, -1.82, 0.2);
+    anatomy.add(shadowPlane);
+
+    const fixedGroup = new THREE.Group();
+    const implantGroup = new THREE.Group();
+    const abutmentGroup = new THREE.Group();
+    const crownGroup = new THREE.Group();
+    anatomy.add(fixedGroup, implantGroup, abutmentGroup, crownGroup);
+
+    // ---------- Procedural Anatomy Helpers ----------
+    function extrudedShape(points, depth, mat, bevel=.05){
+      const shape = new THREE.Shape();
+      shape.moveTo(points[0][0], points[0][1]);
+      for(let i=1; i<points.length; i++) shape.lineTo(points[i][0], points[i][1]);
+      shape.closePath();
+      const geo = new THREE.ExtrudeGeometry(shape, {
+        depth, bevelEnabled:true, bevelSegments:4, steps:2,
+        bevelSize:bevel, bevelThickness:bevel
+      });
+      geo.translate(0, 0, -depth/2);
+      return new THREE.Mesh(geo, mat);
+    }
+
+    function crownGeometry(w=.72, h=.62, d=.72){
+      const shape = new THREE.Shape();
+      shape.moveTo(-w*.48, 0);
+      shape.quadraticCurveTo(-w*.58, h*.18, -w*.42, h*.56);
+      shape.quadraticCurveTo(-w*.2, h*.72, 0, h*.65);
+      shape.quadraticCurveTo(w*.22, h*.75, w*.45, h*.55);
+      shape.quadraticCurveTo(w*.58, h*.25, w*.46, 0);
+      shape.quadraticCurveTo(0, -.08, -w*.48, 0);
+      const geo = new THREE.ExtrudeGeometry(shape, {
+        depth:d, bevelEnabled:true, bevelSegments:5, steps:3,
+        bevelSize:.065, bevelThickness:.065, curveSegments:16
+      });
+      geo.translate(0, 0, -d/2);
+      return geo;
+    }
+
+    function rootGeometry(length=.95, r=.17){
+      const geo = new THREE.CylinderGeometry(r*.62, r, length, 24, 8);
+      geo.scale(1, 1, .78);
+      return geo;
+    }
+
+    function tooth(x, z, type='molar'){
+      const g = new THREE.Group();
+      const w = type==='molar' ? .72 : .61;
+      const h = type==='molar' ? .62 : .68;
+      const crown = new THREE.Mesh(crownGeometry(w, h, .70), enamel);
+      crown.position.y = .58;
+      g.add(crown);
+
+      if(type==='molar'){
+        [-.18, .18].forEach(rx => {
+          const r = new THREE.Mesh(rootGeometry(.92, .17), rootMat);
+          r.position.set(rx, -.23, .02);
+          r.rotation.z = (rx < 0 ? -.08 : .08);
+          g.add(r);
+        });
+      } else {
+        const r = new THREE.Mesh(rootGeometry(1.05, .16), rootMat);
+        r.position.set(.02, -.27, .02);
+        g.add(r);
+      }
+      g.position.set(x, 0, z);
+      fixedGroup.add(g);
+      return g;
+    }
+
+    // ---------- Curved Jawbone Cutaway ----------
+    const bonePts = [
+      [-3.05, -.65], [-2.95, -1.15], [-2.55, -1.52], [-1.8, -1.68],
+      [-.9, -1.72], [0, -1.74], [.9, -1.72], [1.8, -1.68],
+      [2.55, -1.52], [2.95, -1.15], [3.05, -.65],
+      [2.65, -.38], [2.05, -.34], [1.35, -.38], [.7, -.43],
+      [0, -.46], [-.7, -.43], [-1.35, -.38], [-2.05, -.34], [-2.65, -.38]
+    ];
+    const bone = extrudedShape(bonePts, 1.65, boneMat, .09);
+    bone.position.set(0, 0, 0);
+    fixedGroup.add(bone);
+
+    const cutPts = [
+      [-2.75, -.48], [-2.5, -1.08], [-1.9, -1.35], [-1.1, -1.45],
+      [0, -1.5], [1.1, -1.45], [1.9, -1.35], [2.5, -1.08], [2.75, -.48],
+      [2.25, -.27], [1.45, -.29], [.7, -.34], [0, -.36],
+      [-.7, -.34], [-1.45, -.29], [-2.25, -.27]
+    ];
+    const boneCut = extrudedShape(cutPts, .22, boneCutMat, .07);
+    boneCut.position.z = .86;
+    fixedGroup.add(boneCut);
+
+    // ---------- Gingival Arch ----------
+    const gumShapePts = [
+      [-3.05, .05], [-2.7, .30], [-2.15, .40], [-1.55, .34], [-.95, .30],
+      [-.35, .38], [0, .32], [.35, .38], [.95, .30], [1.55, .34],
+      [2.15, .40], [2.7, .30], [3.05, .05], [2.72, -.18], [2.1, -.23],
+      [1.45, -.18], [.8, -.12], [0, -.18], [-.8, -.12], [-1.45, -.18],
+      [-2.1, -.23], [-2.72, -.18]
+    ];
+    const gum = extrudedShape(gumShapePts, 1.72, clinicalGumLight, .13);
+    gum.position.y = .05;
+    gum.position.z = .02;
+    fixedGroup.add(gum);
+
+    const gumFrontPts = [
+      [-3.0, .0], [-2.55, .22], [-2.0, .27], [-1.45, .18], [-.8, .16],
+      [-.35, .24], [0, .17], [.35, .24], [.8, .16], [1.45, .18], [2, .27],
+      [2.55, .22], [3, .0], [2.55, -.25], [1.7, -.3], [.8, -.24], [0, -.29],
+      [-.8, -.24], [-1.7, -.3], [-2.55, -.25]
+    ];
+    const gumFront = extrudedShape(gumFrontPts, .28, clinicalGum, .06);
+    gumFront.position.z = .92;
+    gumFront.position.y = .03;
+    fixedGroup.add(gumFront);
+
+    // ---------- Neighbor Teeth ----------
+    tooth(-1.92, .82, 'molar');
+    tooth(-1.02, .82, 'molar');
+    tooth(1.02, .82, 'premolar');
+    tooth(1.72, .82, 'premolar');
+    tooth(2.38, .78, 'premolar');
+
+    fixedGroup.children.forEach((o, i) => {
+      if(o.type === 'Group' && i > 1) o.rotation.y = (i % 2 ? -.04 : .035);
+    });
+
+    // ---------- Surgical Implant ----------
+    const fixture = new THREE.Group();
+    implantGroup.add(fixture);
+
+    const body = new THREE.Mesh(
+      new THREE.CylinderGeometry(.22, .15, 1.28, 32, 10),
+      implantMat
+    );
+    fixture.add(body);
+
+    class HelixCurve extends THREE.Curve{
+      getPoint(t){
+        const turns = 13;
+        const y = .57 - t * 1.20;
+        const a = t * Math.PI * 2 * turns;
+        const r = .235;
+        return new THREE.Vector3(Math.cos(a) * r, y, Math.sin(a) * r);
+      }
+    }
+    const helix = new THREE.Mesh(
+      new THREE.TubeGeometry(new HelixCurve(), 220, .028, 14, false),
+      implantDark
+    );
+    fixture.add(helix);
+
+    const tip = new THREE.Mesh(new THREE.ConeGeometry(.15, .20, 28), implantMat);
+    tip.position.y = -.73;
+    fixture.add(tip);
+
+    fixture.position.set(0, -.52, .92);
+
+    // ---------- Custom Abutment ----------
+    const collar = new THREE.Mesh(new THREE.CylinderGeometry(.30, .26, .14, 32), implantMat);
+    collar.position.y = .05;
+    abutmentGroup.add(collar);
+    const post = new THREE.Mesh(new THREE.CylinderGeometry(.15, .20, .28, 28), implantMat);
+    post.position.y = .25;
+    abutmentGroup.add(post);
+    abutmentGroup.position.set(0, 0, .92);
+
+    // ---------- Monolithic Zirconia Crown ----------
+    const crown = new THREE.Mesh(crownGeometry(1.02, .70, .74), enamel);
+    crown.position.set(0, .58, .92);
+    crownGroup.add(crown);
+
+    const socketRing = new THREE.Mesh(
+      new THREE.TorusGeometry(.31, .055, 12, 48),
+      clinicalGum
+    );
+    socketRing.rotation.x = Math.PI / 2;
+    socketRing.position.set(0, .18, .93);
+    fixedGroup.add(socketRing);
+
+    // ---------- Floating 3D Part Labels (track moving parts) ----------
+    function makeAnchor(parent, x, y, z){
+      const o = new THREE.Object3D();
+      o.position.set(x, y, z);
+      parent.add(o);
+      return o;
+    }
+    const fixtureAnchor = makeAnchor(fixture, 0.62, 0.05, 0);
+    const abutmentAnchor = makeAnchor(abutmentGroup, 0.55, 0.30, 0);
+    const crownAnchor = makeAnchor(crownGroup, 0.62, 0.95, 0);
+
+    const partLabels = [
+      { text: 'Titanium Fixture', anchor: fixtureAnchor, minStage: 2 },
+      { text: 'Abutment', anchor: abutmentAnchor, minStage: 3 },
+      { text: 'Zirconia Crown', anchor: crownAnchor, minStage: 4 }
+    ];
+    partLabels.forEach(l => {
+      const el = document.createElement('div');
+      el.className = 'part-label';
+      el.textContent = l.text;
+      viewer.appendChild(el);
+      l.el = el;
+    });
+    const _lv = new THREE.Vector3();
+    function updatePartLabels(){
+      const w = viewer.clientWidth, h = viewer.clientHeight;
+      partLabels.forEach(l => {
+        if(stage < l.minStage){ l.el.style.opacity = '0'; return; }
+        l.anchor.getWorldPosition(_lv).project(camera);
+        if(_lv.z > 1){ l.el.style.opacity = '0'; return; }
+        l.el.style.opacity = '1';
+        l.el.style.left = ((_lv.x * 0.5 + 0.5) * w).toFixed(1) + 'px';
+        l.el.style.top = ((-_lv.y * 0.5 + 0.5) * h).toFixed(1) + 'px';
+      });
+    }
+
+    // ---------- Ordered Stage System ----------
+    const stageData = {
+      1: {
+        title: 'The tooth gap',
+        text: 'Natural neighboring teeth, gingiva and supporting jawbone remain visible while the missing-tooth position is shown as a clinical cutaway.',
+      },
+      2: {
+        title: 'Place the implant post',
+        text: 'The titanium fixture drops from above and seats within the supporting jawbone.',
+      },
+      3: {
+        title: 'Fit the collar',
+        text: 'The abutment drops onto the implant and settles at the gumline.',
+      },
+      4: {
+        title: 'Seat the crown',
+        text: 'The final crown drops onto the abutment and settles into the natural tooth row.',
+      }
+    };
+
+    const REST = { fixture: -0.52, abutment: 0, crown: 0 };
+    const DROP = { fixture: 1.65, abutment: 1.10, crown: 1.30 };
+
+    let stage = 1;
+    let highestStage = 1;
+    let exploded = false;
+    let motion = { fixture: false, abutment: false, crown: false };
+    let animationBusy = false;
+
+    function applyVisibilityForStage(n){
+      implantGroup.visible = n >= 2;
+      abutmentGroup.visible = n >= 3;
+      crownGroup.visible = n >= 4;
+      socketRing.visible = n >= 2;
+    }
+
+    function updateStepButtons(){
+      document.querySelectorAll('.step').forEach(btn => {
+        const n = +btn.dataset.stage;
+        btn.classList.toggle('active', n === stage);
+        btn.classList.toggle('done', n < highestStage || (n === highestStage && highestStage === 4));
+        const locked = (n !== 1 && n !== highestStage + 1) || (animationBusy && n !== stage);
+        btn.classList.toggle('locked', locked);
+        btn.disabled = locked;
+        btn.setAttribute('aria-disabled', locked ? 'true' : 'false');
+      });
+    }
+
+    function resetToGap(){
+      stage = 1;
+      highestStage = 1;
+      animationBusy = false;
+      motion = { fixture: false, abutment: false, crown: false };
+      exploded = false;
+
+      implantGroup.visible = false;
+      abutmentGroup.visible = false;
+      crownGroup.visible = false;
+      socketRing.visible = false;
+
+      fixture.position.y = REST.fixture;
+      abutmentGroup.position.y = REST.abutment;
+      crownGroup.position.y = REST.crown;
+      fixture.scale.setScalar(1);
+      abutmentGroup.scale.setScalar(1);
+      crownGroup.scale.setScalar(1);
+
+      document.getElementById('explode').textContent = 'EXPLODE LAYERS';
+      document.getElementById('stageTitle').textContent = stageData[1].title;
+      document.getElementById('stageText').textContent = stageData[1].text;
+      updateStepButtons();
+    }
+
+    function setStage(n, animate=true){
+      if(n === 1){
+        resetToGap();
+        return;
+      }
+
+      if(n !== highestStage + 1 || animationBusy) return;
+
+      stage = n;
+      highestStage = n;
+      animationBusy = animate;
+      motion = { fixture: false, abutment: false, crown: false };
+
+      document.getElementById('stageTitle').textContent = stageData[n].title;
+      document.getElementById('stageText').textContent = stageData[n].text;
+
+      applyVisibilityForStage(n);
+      fixture.position.y = REST.fixture;
+      abutmentGroup.position.y = REST.abutment;
+      crownGroup.position.y = REST.crown;
+
+      if(!animate){
+        animationBusy = false;
+        updateStepButtons();
+        return;
+      }
+
+      if(n === 2){
+        fixture.position.y = DROP.fixture;
+        motion.fixture = true;
+      } else if(n === 3){
+        abutmentGroup.position.y = DROP.abutment;
+        motion.abutment = true;
+      } else if(n === 4){
+        crownGroup.position.y = DROP.crown;
+        motion.crown = true;
+      }
+      updateStepButtons();
+    }
+
+    document.querySelectorAll('.step').forEach(btn => {
+      btn.addEventListener('click', () => setStage(+btn.dataset.stage, true));
+    });
+
+    function snapFeedback(){
+      viewer.classList.remove('snap-flash');
+      void viewer.offsetWidth;
+      viewer.classList.add('snap-flash');
+      setTimeout(() => viewer.classList.remove('snap-flash'), 250);
+      if (navigator.vibrate) {
+        try { navigator.vibrate(12); } catch (e) { }
+      }
+    }
+
+    function animateStage(now){
+      if(!animateStage.last) animateStage.last = now;
+      const dt = Math.min(0.04, (now - animateStage.last) / 1000);
+      animateStage.last = now;
+
+      function settle(group, key, target){
+        if(!motion[key]) return;
+        const current = group.position.y;
+        const next = current + (target - current) * Math.min(1, dt * 7.0);
+        group.position.y = next;
+        if(Math.abs(target - next) < 0.006){
+          group.position.y = target;
+          motion[key] = false;
+          snapFeedback();
+        }
+      }
+
+      settle(fixture, 'fixture', REST.fixture);
+      settle(abutmentGroup, 'abutment', REST.abutment);
+      settle(crownGroup, 'crown', REST.crown);
+
+      if(animationBusy && !motion.fixture && !motion.abutment && !motion.crown){
+        animationBusy = false;
+        updateStepButtons();
+      }
+    }
+
+    // Touch Interaction Shield & Reset Handlers
+    const shield = document.getElementById('interactionShield');
+    const anatomyCard = document.getElementById('anatomyCard');
+
+    if (shield) {
+      shield.addEventListener('click', () => {
+        shield.classList.add('is-active');
+        controls.enabled = true;
+      });
+    }
+
+    document.addEventListener('pointerdown', (e) => {
+      if (anatomyCard && !anatomyCard.contains(e.target) && shield) {
+        shield.classList.remove('is-active');
+        controls.enabled = false;
+      }
+    });
+
+    document.getElementById('explode').addEventListener('click', e => {
+      exploded = !exploded;
+      e.currentTarget.textContent = exploded ? 'ASSEMBLE LAYERS' : 'EXPLODE LAYERS';
+      if(exploded){
+        fixture.position.y = REST.fixture;
+        abutmentGroup.position.y = REST.abutment + 0.65;
+        crownGroup.position.y = REST.crown + 1.45;
+      } else {
+        fixture.position.y = REST.fixture;
+        abutmentGroup.position.y = REST.abutment;
+        crownGroup.position.y = REST.crown;
+      }
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+      camera.position.set(4.8, 1.85, 6.8);
+      controls.target.set(0, -0.15, 0);
+      controls.update();
+      resetToGap();
+    });
+
+    // Full Procedural Sequence Autoplay
+    let autoplayRunning = false;
+    function playFullBuild(){
+      if(autoplayRunning) return;
+      autoplayRunning = true;
+      const sequence = [2, 3, 4];
+      let idx = 0;
+      function advance(){
+        if(idx >= sequence.length){ autoplayRunning = false; return; }
+        if(animationBusy){ setTimeout(advance, 120); return; }
+        setStage(sequence[idx], true);
+        idx++;
+        setTimeout(advance, 700);
+      }
+      advance();
+    }
+
+    document.getElementById('playBuild').addEventListener('click', () => {
+      resetToGap();
+      setTimeout(playFullBuild, 300);
+    });
+
+    anatomy.traverse(o => {
+      if(o.isMesh && o !== shadowPlane){ o.castShadow = true; o.receiveShadow = true; }
+    });
+
+    resetToGap();
+
+    // Auto-demo on first view disabled; use PLAY FULL BUILD to start manually.
+
+    function resize(){
+      const w = viewer.clientWidth, h = viewer.clientHeight;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    const clock = new THREE.Clock();
+    function render(){
+      requestAnimationFrame(render);
+      animateStage(performance.now());
+      controls.update();
+      updatePartLabels();
+      renderer.render(scene, camera);
+    }
+    render();
+  })();
+  </script>
+</body>
+</html>

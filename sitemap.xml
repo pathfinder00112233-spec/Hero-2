@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 1. Flagship Home -->
+  <url>
+    <loc>https://mintclinicrohtak.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. The 3D Flagship Showrooms -->
+  <url>
+    <loc>https://mintclinicrohtak.com/implants.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/aligners.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/root-canal.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 3. Clinical & Photo-Backed Treatment Hubs -->
+  <url>
+    <loc>https://mintclinicrohtak.com/crowns.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/veneers.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/checkup.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/checkup.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 4. The 6 Neighborhood Catchment Pages -->
+  <url>
+    <loc>https://mintclinicrohtak.com/dentist-near-model-town-rohtak.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/dentist-near-d-park-rohtak.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/dentist-near-delhi-road-rohtak.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/dentist-near-pgims-rohtak.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/dentist-near-babra-mohalla-rohtak.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mintclinicrohtak.com/dentist-near-indira-market-rohtak.html</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>
